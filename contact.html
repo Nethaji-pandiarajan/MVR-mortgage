@@ -67,7 +67,7 @@
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="index.html" class="navbar-brand p-0">
-                <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1>
+                <img class="micro-logo" src="https://mvrmortgage.com/clients/11469/uploads/2021/04/43884.png" alt="MVR Mortgage Company" title="MVR Mortgage Company" style="height:69px;width:104px">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -75,16 +75,18 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="Purchase.html" class="nav-item nav-link">Purchase</a>
+                    <a href="Refinance.html" class="nav-item nav-link">Refinance</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="service.html" class="nav-item nav-link">Services</a>
-                    <div class="nav-item dropdown">
+                    <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
                         <div class="dropdown-menu m-0">
                             <a href="blog.html" class="dropdown-item">Blog Grid</a>
                             <a href="detail.html" class="dropdown-item">Blog Detail</a>
                         </div>
-                    </div>
-                    <div class="nav-item dropdown">
+                    </div> -->
+                    <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
                             <a href="price.html" class="dropdown-item">Pricing Plan</a>
@@ -93,11 +95,205 @@
                             <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                             <a href="quote.html" class="dropdown-item">Free Quote</a>
                         </div>
+                    </div> -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Loan Options</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="30-blog.html" class="dropdown-item">30 Year Fixed Mortgage</a>
+                            <a href="15-blog.html" class="dropdown-item">15 Year Fixed Mortgage</a>
+                            <a href="adj-blog.html" class="dropdown-item">Adjustable Rate Mortgage</a>
+                            <a href="fha-blog.html" class="dropdown-item">FHA Loans</a>
+                            <a href="jumbo-blog.html" class="dropdown-item">Jumbo Loans</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Free Tools</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="pre-approval.html" class="dropdown-item">Pre-Approval Letter</a>
+                            <a href="refinance-analysis.html" class="dropdown-item">Refinance Analysis</a>
+                            <a href="payment-calculator.html" class="dropdown-item">Payment Calculator</a>
+                            <a href="serch-home-sale.html" class="dropdown-item">Search Homes for Sale</a>
+                            <a href="home-estimate.html" class="dropdown-item">Home Value Estimate</a>
+                            <a href="home-insurance.html" class="dropdown-item">Home Insurance Quote</a>
+                        </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link active">Contact</a>
                 </div>
-                <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
-                <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a>
+                <!-- <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton> -->
+                <!-- get quote start --> 
+                <div class="dropdown">
+                    <button class="ml10 btn btn-secondary drop-btn-clr dropdown-toggle" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Get a Quote
+                    </button>
+                    <ul class="dropdown-menu drop-style">
+                        <h2 class="text-center">Get a Quote</h2>
+                        <div class="quote-inp">
+                            <div class="ml10 mt10 fl">
+                                <label for="first_name">First Name<span class="text-danger">*</span></label>
+                                <div><input type="text"></div>
+                            </div>
+                            <div class="ml10 mt10 fl">
+                                <label for="first_name">Last Name<span class="text-danger">*</span></label>
+                                <div><input type="text"></div>
+                            </div>
+                            <div class="ml10 mt10 fl">
+                                <label for="first_name">Email<span class="text-danger">*</span></label>
+                                <div><input type="text"></div>
+                            </div>
+                            <div class="ml10 mt10 fl">
+                                <label for="first_name">Home Phone<span class="text-danger">*</span></label>
+                                <div><input type="text"></div>
+                            </div>
+                            <div class="ml10 mt10 fl">
+                                <label for="first_name">Loan Amount<span class="text-danger">*</span></label>
+                                <div><select id="loan_amount">
+                                        <option disabled="disabled" value="">Select</option>
+                                        <option value="less_than_70000">Less than $70,000</option>
+                                        <option value="70001_80000">$70,001 - $80,000</option>
+                                        <option value="80001_90000">$80,001 - $90,000</option>
+                                        <option value="90001_100000">$90,001 - $100,000</option>
+                                        <option value="100001_110000">$100,001 - $110,000</option>
+                                        <option value="110001_120000">$110,001 - $120,000</option>
+                                        <option value="120001_130000">$120,001 - $130,000</option>
+                                        <option value="130001_140000">$130,001 - $140,000</option>
+                                        <option value="140001_150000">$140,001 - $150,000</option>
+                                        <option value="150001_160000">$150,001 - $160,000</option>
+                                        <option value="160001_170000">$160,001 - $170,000</option>
+                                        <option value="170001_180000">$170,001 - $180,000</option>
+                                        <option value="180001_190000">$180,001 - $190,000</option>
+                                        <option value="190001_200000">$190,001 - $200,000</option>
+                                        <option value="200001_210000">$200,001 - $210,000</option>
+                                        <option value="210001_220000">$210,001 - $220,000</option>
+                                        <option value="220001_230000">$220,001 - $230,000</option>
+                                        <option value="230001_240000">$230,001 - $240,000</option>
+                                        <option value="240001_250000">$240,001 - $250,000</option>
+                                        <option value="250001_275000">$250,001 - $275,000</option>
+                                        <option value="275001_300000">$275,001 - $300,000</option>
+                                        <option value="300001_325000">$300,001 - $325,000</option>
+                                        <option value="325001_350000">$325,001 - $350,000</option>
+                                        <option value="350001_375000">$350,001 - $375,000</option>
+                                        <option value="375001_400000">$375,001 - $400,000</option>
+                                        <option value="400001_425000">$400,001 - $425,000</option>
+                                        <option value="425001_450000">$425,001 - $450,000</option>
+                                        <option value="450001_475000">$450,001 - $475,000</option>
+                                        <option value="475001_500000">$475,001 - $500,000</option>
+                                        <option value="525001_550000">$525,001 - $550,000</option>
+                                        <option value="550001_575000">$550,001 - $575,000</option>
+                                        <option value="575001_600000">$575,001 - $600,000</option>
+                                        <option value="600001_625000">$600,001 - $625,000</option>
+                                        <option value="625001_650000">$625,001 - $650,000</option>
+                                        <option value="650001_675000">$650,001 - $675,000</option>
+                                        <option value="675001_700000">$675,001 - $700,000</option>
+                                        <option value="700001_725000">$700,001 - $725,000</option>
+                                        <option value="725001_750000">$725,001 - $750,000</option>
+                                        <option value="750001_775000">$750,001 - $775,000</option>
+                                        <option value="775001_800000">$775,001 - $800,000</option>
+                                        <option value="800001_825000">$800,001 - $825,000</option>
+                                        <option value="825001_850000">$825,001 - $850,000</option>
+                                        <option value="850001_875000">$850,001 - $875,000</option>
+                                        <option value="875001_900000">$875,001 - $900,000</option>
+                                        <option value="900001_925000">$900,001 - $925,000</option>
+                                        <option value="925001_950000">$925,001 - $950,000</option>
+                                        <option value="950001_975000">$950,001 - $975,000</option>
+                                        <option value="975001_1000000">$975,001 - $1,000,000</option>
+                                        <option value="1000001_1100000">$1,000,001 - $1,100,000</option>
+                                        <option value="1100001_1200000">$1,100,001 - $1,200,000</option>
+                                        <option value="1200001_1300000">$1,200,001 - $1,300,000</option>
+                                        <option value="1300001_1400000">$1,300,001 - $1,400,000</option>
+                                        <option value="1400001_1500000">$1,400,001 - $1,500,000</option>
+                                        <option value="1500000+">$1,500,000+</option>
+                                    </select></div>
+                            </div>
+                            <div class="ml10 mt10 fl">
+                                <label for="first_name">Property Value<span class="text-danger">*</span></label>
+                                <div><select id="property_value">
+                                        <option disabled="disabled" value="">Select</option>
+                                        <option value="less_than_70000">Less than $70,000</option>
+                                        <option value="70001_80000">$70,001 - $80,000</option>
+                                        <option value="80001_90000">$80,001 - $90,000</option>
+                                        <option value="90001_100000">$90,001 - $100,000</option>
+                                        <option value="100001_110000">$100,001 - $110,000</option>
+                                        <option value="110001_120000">$110,001 - $120,000</option>
+                                        <option value="120001_130000">$120,001 - $130,000</option>
+                                        <option value="130001_140000">$130,001 - $140,000</option>
+                                        <option value="140001_150000">$140,001 - $150,000</option>
+                                        <option value="150001_160000">$150,001 - $160,000</option>
+                                        <option value="160001_170000">$160,001 - $170,000</option>
+                                        <option value="170001_180000">$170,001 - $180,000</option>
+                                        <option value="180001_190000">$180,001 - $190,000</option>
+                                        <option value="190001_200000">$190,001 - $200,000</option>
+                                        <option value="200001_210000">$200,001 - $210,000</option>
+                                        <option value="210001_220000">$210,001 - $220,000</option>
+                                        <option value="220001_230000">$220,001 - $230,000</option>
+                                        <option value="230001_240000">$230,001 - $240,000</option>
+                                        <option value="240001_250000">$240,001 - $250,000</option>
+                                        <option value="250001_275000">$250,001 - $275,000</option>
+                                        <option value="275001_300000">$275,001 - $300,000</option>
+                                        <option value="300001_325000">$300,001 - $325,000</option>
+                                        <option value="325001_350000">$325,001 - $350,000</option>
+                                        <option value="350001_375000">$350,001 - $375,000</option>
+                                        <option value="375001_400000">$375,001 - $400,000</option>
+                                        <option value="400001_425000">$400,001 - $425,000</option>
+                                        <option value="425001_450000">$425,001 - $450,000</option>
+                                        <option value="450001_475000">$450,001 - $475,000</option>
+                                        <option value="475001_500000">$475,001 - $500,000</option>
+                                        <option value="525001_550000">$525,001 - $550,000</option>
+                                        <option value="550001_575000">$550,001 - $575,000</option>
+                                        <option value="575001_600000">$575,001 - $600,000</option>
+                                        <option value="600001_625000">$600,001 - $625,000</option>
+                                        <option value="625001_650000">$625,001 - $650,000</option>
+                                        <option value="650001_675000">$650,001 - $675,000</option>
+                                        <option value="675001_700000">$675,001 - $700,000</option>
+                                        <option value="700001_725000">$700,001 - $725,000</option>
+                                        <option value="725001_750000">$725,001 - $750,000</option>
+                                        <option value="750001_775000">$750,001 - $775,000</option>
+                                        <option value="775001_800000">$775,001 - $800,000</option>
+                                        <option value="800001_825000">$800,001 - $825,000</option>
+                                        <option value="825001_850000">$825,001 - $850,000</option>
+                                        <option value="850001_875000">$850,001 - $875,000</option>
+                                        <option value="875001_900000">$875,001 - $900,000</option>
+                                        <option value="900001_925000">$900,001 - $925,000</option>
+                                        <option value="925001_950000">$925,001 - $950,000</option>
+                                        <option value="950001_975000">$950,001 - $975,000</option>
+                                        <option value="975001_1000000">$975,001 - $1,000,000</option>
+                                        <option value="1000001_1100000">$1,000,001 - $1,100,000</option>
+                                        <option value="1100001_1200000">$1,100,001 - $1,200,000</option>
+                                        <option value="1200001_1300000">$1,200,001 - $1,300,000</option>
+                                        <option value="1300001_1400000">$1,300,001 - $1,400,000</option>
+                                        <option value="1400001_1500000">$1,400,001 - $1,500,000</option>
+                                        <option value="1500000+">$1,500,000+</option>
+                                    </select></div>
+                            </div>
+                            <div class="ml10 mt10 fl">
+                                <label for="first_name">Loan Type<span class="text-danger">*</span></label>
+                                <div>
+                                    <select id="loan_type">
+                                        <option disabled="disabled" value="">Select</option>
+                                        <option value="purchase_loan">Purchase Loan</option>
+                                        <option value="refinance_loan">Refinance Loan</option>
+                                        <option value="debt_consolidation">Debt Consolidation</option>
+                                        <option value="home_equity">Home Equity</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="ml10 mt10 fl">
+                                <label for="first_name">Credit History<span class="text-danger">*</span></label>
+                                <div><select id="credit_history">
+                                        <option disabled="disabled" value="">Select</option>
+                                        <option value="excellent">Excellent</option>
+                                        <option value="good">Good</option>
+                                        <option value="fair">Fair</option>
+                                        <option value="poor">Poor</option>
+                                    </select></div>
+                            </div>
+                        </div>
+                        <div class="mt20 ml10 sub-bg"><a class="btn btn-submit btn-default">
+                                Submit</a>
+                        </div>
+                    </ul>
+                </div>
+                <!-- get quote end --> 
             </div>
         </nav>
 
@@ -241,12 +437,12 @@
                             <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Startup</h1>
                         </a>
                         <p class="mt-3 mb-4">Lorem diam sit erat dolor elitr et, diam lorem justo amet clita stet eos sit. Elitr dolor duo lorem, elitr clita ipsum sea. Diam amet erat lorem stet eos. Diam amet et kasd eos duo.</p>
-                        <form action="">
+                        <!-- <form action="">
                             <div class="input-group">
                                 <input type="text" class="form-control border-white p-3" placeholder="Your Email">
                                 <button class="btn btn-dark">Sign Up</button>
                             </div>
-                        </form>
+                        </form> -->
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-6">
@@ -257,15 +453,15 @@
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-primary me-2"></i>
-                                <p class="mb-0">123 Street, New York, USA</p>
+                                <p class="mb-0">Charlotte, NC 28227</p>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-envelope-open text-primary me-2"></i>
-                                <p class="mb-0">info@example.com</p>
+                                <p class="mb-0">venkat@mvrmortgage.com</p>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-telephone text-primary me-2"></i>
-                                <p class="mb-0">+012 345 67890</p>
+                                <p class="mb-0">(980) 613-02780</p>
                             </div>
                             <div class="d-flex mt-4">
                                 <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
@@ -279,25 +475,24 @@
                                 <h3 class="text-light mb-0">Quick Links</h3>
                             </div>
                             <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                                <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                <a class="text-light mb-2" href="Purchase.html"><i class="bi bi-arrow-right text-primary me-2"></i>Purchase</a>
+                                <a class="text-light mb-2" href="Refinance.html"><i class="bi bi-arrow-right text-primary me-2"></i>Refinance</a>
+                                <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About</a>
+                                <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
+                                <a class="text-light mb-2" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Popular Links</h3>
+                                <h3 class="text-light mb-0">Loan Options</h3>
                             </div>
                             <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                                <a class="text-light mb-2" href="30-blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>30 Year Fixed Mortgage</a>
+                                <a class="text-light mb-2" href="15-blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>15 Year Fixed Mortgage</a>
+                                <a class="text-light mb-2" href="adj-blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Adjustable Rate Mortgage</a>
+                                <a class="text-light mb-2" href="fha-blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>FHA Loans</a>
+                                <a class="text-light mb-2" href="jumbo-blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Jumbo Loans</a>
                             </div>
                         </div>
                     </div>
@@ -305,20 +500,21 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid text-white" style="background: #061429;">
+    <!-- <div class="container-fluid text-white" style="background: #061429;">
         <div class="container text-center">
             <div class="row justify-content-end">
                 <div class="col-lg-8 col-md-6">
                     <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Your Site Name</a>. All Rights Reserved. 
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Your Site Name</a>. All Rights Reserved.  -->
 						
 						<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-						Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>
+						<!-- Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>
+                        <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Footer End -->
 
 
