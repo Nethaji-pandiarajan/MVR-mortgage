@@ -1,12 +1,21 @@
 /********** Template CSS **********/
 :root {
-    --primary: #06A3DA;
+    --primary: #1A1363;
     --secondary: #34AD54;
     --light: #EEF9FF;
     --dark: #091E3E;
+    --orange:#EA7826;
 }
 
-
+.bg-primary,.btn-primary {
+    background-color:#1A1363 !important;
+}
+.text-primary {
+    color: #1A1363 !important;
+}
+.bi-arrow-right.text-primary{
+    color: var(--light) !important;
+} 
 /*** Spinner ***/
 .spinner {
     width: 40px;
@@ -257,7 +266,7 @@ h6,
     height: 5px;
     left: 0;
     bottom: 0;
-    background: var(--primary);
+    background: var(--orange);
     border-radius: 2px;
 }
 
@@ -330,8 +339,10 @@ h6,
     transform: rotate(-45deg);
 }
 
-.service-item .service-icon i {
+.service-item .service-icon svg {
+    width: 30px;
     transform: rotate(45deg);
+    color: var(--light);
 }
 
 .service-item a.btn {
@@ -476,15 +487,65 @@ h6,
     background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/carousel-1.jpg) center center no-repeat;
     background-size: cover;
 }
-
+.modal-footer {
+    justify-content: space-between !important;
+}
 .link-animated a {
     transition: .5s;
+    width: 325px;
 }
 
 .link-animated a:hover {
     padding-left: 10px;
 }
-
+.f12 {
+    font-size: 12px;
+}
+.mt10 {
+    margin-top: 10px;
+}
+.mt30 {
+    margin-top: 30px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.ml10{
+    margin-left: 10px;
+}
+.fl {
+    float: left;
+}
+.drop-style {
+    width: 384px;position: absolute;right: 0;height: 475px;background-color: #424140;color: white;
+}
+.drop-style h2 {
+    color: white !important;
+}
+.sub-bg {
+    background-color: black;
+    width: 80px;
+    border-radius: 30px;
+}
+.sub-bg a {
+    color: white;
+}
+.quote-inp {
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+}
+.quote-inp input,select {
+    width: 175px;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+}
+.drop-btn-clr {
+    background-color: var(--primary) !important;
+    border-color: #06A3DA !important;
+}
 @media (min-width: 767.98px) {
     .footer-about {
         margin-bottom: -75px;
