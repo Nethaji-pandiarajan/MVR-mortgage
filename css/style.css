@@ -106,6 +106,7 @@ h6,
 
 .btn-primary:hover {
     box-shadow: inset 0 0 0 0 var(--primary);
+    color: var(--light);
 }
 
 .btn-secondary:hover {
@@ -536,9 +537,9 @@ h6,
 .drop-style {
     background-color:white;color: var(--primary);
 }
-.modal-dialog {
+/* .modal-dialog {
     width: 384px;
-}
+} */
 .drop-style h2 {
     color: white !important;
 }
@@ -551,7 +552,7 @@ color: var(--primary);
     margin-top: 0.125rem;
 }
 .sub-bg {
-    background-color: var(--orange);
+    background-color: var(--orange) !important;
     border-radius: 30px;
     width: 345px;
     text-align: center;
@@ -564,7 +565,16 @@ color: var(--primary);
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
 }
-.quote-inp input,select {
+.quick-quote-form .form-group {
+    width: 50% !important;
+}
+.form-group label {
+    color: var(--primary);
+}
+.quick-quote-form.row {
+    margin: 0 !important;
+}
+/* .quote-inp input,select {
     width: 165px;
     padding: 5px;
     border-radius: 5px;
@@ -572,7 +582,7 @@ color: var(--primary);
     font-size: 16px;
     outline: none;
     border: 1px solid #ffc36a54;
-}
+} */
 .drop-btn-clr {
     background-color: var(--primary) !important;
     /* border-color: #06A3DA !important; */
