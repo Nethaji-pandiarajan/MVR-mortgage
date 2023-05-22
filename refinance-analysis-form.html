@@ -125,137 +125,231 @@
     <!-- Navbar End -->
 
     <!-- pre-approval form start -->
-    <form class="g-3 mt-4 mb-4 p-4 row quick-quote-form">
-        <h5 class="modal-title text-center mb-3 mt-3">GET YOUR FREE REFINANCE ANALYSIS</h5>
-        <div class="form-group">
-            <label for="full_name">Full Name<span class="text-danger">*</span></label>
-            <div><input type="text" class="form-control"></div>
-        </div>
-        <div class="form-group">
-            <label for="email">What is your email address?<span class="text-danger">*</span></label>
-            <div><input type="text" class="form-control"></div>
-        </div>
-        <div class="form-group">
-            <label for="number">What is your phone number?<span class="text-danger">*</span></label>
-            <div><input type="text" class="form-control"></div>
-        </div>
-        <div class="form-group">
-            <label for="Great! What type of property are you refinancing?">Great! What type of property are you refinancing?<span class="text-danger">*</span></label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected value="1">Single family home</option>
-                <option value="2">condominium</option>
-                <option value="3">townhome</option>
-                <option value="4">multi-family home</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="Estimate your credit score">Estimate your credit score<span class="text-danger">*</span></label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected value="1">Excellent 740 + </option>
-                <option value="2">Good 700 - 739</option>
-                <option value="3">Average 660-699</option>
-                <option value="4">Fair 600-659,Poor < 600</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="What year did you purchase your home?">What year did you purchase your home?<span class="text-danger">*</span></label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected value="1">2010-2023</option>
-                <option value="2">2000 - 2009</option>
-                <option value="3">1990 - 1999</option>
-                <option value="4">Before 1990</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="Please estimate the value of the property">Please estimate the value of the property<span class="text-danger">*</span></label>
-            <div><input type="range" class="form-range" min="220,001" max="240,000"></div>
-        </div>
-        <div class="form-group">
-            <label for="What is the remaining 1st mortgage balance?">What is the remaining 1st mortgage balance?<span class="text-danger">*</span></label>
-            <div><input type="range" class="form-range" min="180,001" max="200,000"></div>
-        </div>
-        <div class="form-group">
-            <label for="What is your 1st mortgage interest rate?">What is your 1st mortgage interest rate?<span class="text-danger">*</span></label>
-            <div><input type="range" class="form-range" min="0%" max="5%"></div>
-        </div>
-        <div class="form-group">
-            <label for="How will this property be used?">How will this property be used?<span class="text-danger">*</span></label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected value="1">Primary Home</option>
-                <option value="2">Secondary Home</option>
-                <option value="3">Rental Property</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="What kind of rate do you prefer?">What kind of rate do you prefer?<span class="text-danger">*</span></label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected value="1">Adjustable</option>
-                <option value="2">Fixed</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="Do you have a second mortgage?">Do you have a second mortgage?<span class="text-danger">*</span></label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected value="1">Yes</option>
-                <option value="2">No</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="Would you like to borrow additional cash?">Would you like to borrow additional cash?<span class="text-danger">*</span></label>
-            <div><input type="range" class="form-range" min="0" max="0"></div>
-        </div>
-        <div class="form-group">
-            <label for="What is your employment status?">What is your employment status?<span class="text-danger">*</span></label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected value="1">Employed</option>
-                <option value="2">Not Employed</option>
-                <option value="3">Self Employed</option>
-                <option value="4">Military</option>
-                <option value="5">Other</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="Bankruptcy, short sale, or foreclosure in the last 3 years?">Bankruptcy, short sale, or foreclosure in the last 3 years?<span class="text-danger">*</span></label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected value="1">Yes</option>
-                <option value="2">No</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="Can you show proof of income?">Can you show proof of income?<span class="text-danger">*</span></label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected value="1">Yes</option>
-                <option value="2">No</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="What is your gross annual household income?">What is your gross annual household income?<span class="text-danger">*</span></label>
-            <div><input type="range" class="form-range" min="75,001" max="100,000"></div>
-        </div>
-        <div class="form-group">
-            <label for="What is your gross annual household income?">What is your gross annual household income?<span class="text-danger">*</span></label>
-            <div><input type="range" class="form-range" min="2,001" max="3,000"></div>
-        </div>
-        <div class="form-group">
-            <label for="Do you currently have a FHA loan? ">Do you currently have a FHA loan? <span class="text-danger">*</span></label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected value="1">Yes</option>
-                <option value="2">No</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="Any late mortgage payments in the last 12 months?">Any late mortgage payments in the last 12 months?<span class="text-danger">*</span></label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected value="1">None</option>
-                <option value="2">1 Late Payment</option>
-                <option value="3">2+ Late Payment</option>
-            </select>
-        </div>
+    <div class="container-fluid position-relative p-0">
+        <div class="container py-5 pt-lg-0">
+            <div class="row gx-0">
+                <div class="wow zoomIn" data-wow-delay="0.1s">
+                    <form class="g-3 mt-4 mb-4 p-4 row quick-quote-form">
+                        <h5 class="modal-title text-center mb-3 mt-3">GET YOUR FREE REFINANCE ANALYSIS</h5>
+                        <div class="form-group">
+                            <label for="full_name">Full Name<span class="text-danger">*</span></label>
+                            <div><input type="text" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">What is your email address?<span class="text-danger">*</span></label>
+                            <div><input type="text" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="number">What is your phone number?<span class="text-danger">*</span></label>
+                            <div><input type="text" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Great! What type of property are you refinancing?">Great! What type of property
+                                are you refinancing?<span class="text-danger">*</span></label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected value="1">Single family home</option>
+                                <option value="2">condominium</option>
+                                <option value="3">townhome</option>
+                                <option value="4">multi-family home</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Estimate your credit score">Estimate your credit score<span
+                                    class="text-danger">*</span></label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected value="1">Excellent 740 + </option>
+                                <option value="2">Good 700 - 739</option>
+                                <option value="3">Average 660-699</option>
+                                <option value="4">Fair 600-659,Poor < 600</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="What year did you purchase your home?">What year did you purchase your
+                                home?<span class="text-danger">*</span></label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected value="1">2010-2023</option>
+                                <option value="2">2000 - 2009</option>
+                                <option value="3">1990 - 1999</option>
+                                <option value="4">Before 1990</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Please estimate the value of the property">Please estimate the value of the
+                                property<span class="text-danger">*</span></label>
+                                <div class="main w-100">
+                                    <input type="range" min="0" max="100" value="70" id="slider">
+                                    <div id="selector">
+                                        <div class="selectBtn"></div>
+                                        <div id="selectValue"></div>
+                                    </div>
+                                    <div id="progressBar"></div>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="What is the remaining 1st mortgage balance?">What is the remaining 1st mortgage
+                                balance?<span class="text-danger">*</span></label>
+                            <input type="range" value="44" min="1" max="100"
+                                oninput="this.nextElementSibling.value = this.value">
+                            <output>44</output>
+                        </div>
+                        <div class="form-group">
+                            <label for="What is your 1st mortgage interest rate?">What is your 1st mortgage interest
+                                rate?<span class="text-danger">*</span></label>
+                            <input type="range" value="24" min="1" max="100"
+                                oninput="this.nextElementSibling.value = this.value">
+                            <output>24</output>
+                        </div>
+                        <div class="form-group">
+                            <label for="How will this property be used?">How will this property be used?<span
+                                    class="text-danger">*</span></label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected value="1">Primary Home</option>
+                                <option value="2">Secondary Home</option>
+                                <option value="3">Rental Property</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="What kind of rate do you prefer?">What kind of rate do you prefer?<span
+                                    class="text-danger">*</span></label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected value="1">Adjustable</option>
+                                <option value="2">Fixed</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Do you have a second mortgage?">Do you have a second mortgage?<span
+                                    class="text-danger">*</span></label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Would you like to borrow additional cash?">Would you like to borrow additional
+                                cash?<span class="text-danger">*</span></label>
+                            <input type="range" value="84" min="1" max="100"
+                                oninput="this.nextElementSibling.value = this.value">
+                            <output>84</output>
+                        </div>
+                        <div class="form-group">
+                            <label for="What is your employment status?">What is your employment status?<span
+                                    class="text-danger">*</span></label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected value="1">Employed</option>
+                                <option value="2">Not Employed</option>
+                                <option value="3">Self Employed</option>
+                                <option value="4">Military</option>
+                                <option value="5">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Bankruptcy, short sale, or foreclosure in the last 3 years?">Bankruptcy, short
+                                sale, or foreclosure in the last 3 years?<span class="text-danger">*</span></label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Can you show proof of income?">Can you show proof of income?<span
+                                    class="text-danger">*</span></label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="What is your gross annual household income?">What is your gross annual household
+                                income?<span class="text-danger">*</span></label>
+                            <input type="range" value="24" min="1" max="100"
+                                oninput="this.nextElementSibling.value = this.value">
+                            <output>24</output>
+                        </div>
+                        <div class="form-group">
+                            <label for="What is your gross annual household income?">What is your gross annual household
+                                income?<span class="text-danger">*</span></label>
+                            <input type="range" value="64" min="1" max="100"
+                                oninput="this.nextElementSibling.value = this.value">
+                            <output>64</output>
+                        </div>
+                        <div class="form-group">
+                            <label for="Do you currently have a FHA loan? ">Do you currently have a FHA loan? <span
+                                    class="text-danger">*</span></label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Any late mortgage payments in the last 12 months?">Any late mortgage payments in
+                                the last 12 months?<span class="text-danger">*</span></label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected value="1">None</option>
+                                <option value="2">1 Late Payment</option>
+                                <option value="3">2+ Late Payment</option>
+                            </select>
+                        </div>
 
-        <button type="submit" class="sub-bg mb-2 mt-4 w-100 btn btn-primary">Submit</button>
-    </form>
-    <!-- pre-approval form start -->
+                        <div class="text-center"><button type="submit"
+                                class="btn btn-primary mb-2 mt-4 sub-bg w-25">Submit</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- pre-approval form end -->
 
+
+    <!-- model popup start-->
+    <div class="modal" tabindex="-1" role="dialog" id="quoteContent">
+        <div class="modal-dialog  modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body modal-popop-centered drop-style">
+                    <button type="button" class="mb-3 mt-3 close close-model" aria-label="Close"
+                        data-bs-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h5 class="modal-title text-center mb-3 mt-3">GET A QUICK QUOTE</h5>
+                    <form class="g-3 row quick-quote-form">
+                        <div class="form-group">
+                            <label for="first_name">First Name<span class="text-danger">*</span></label>
+                            <div><input type="text" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="last_name">Last Name<span class="text-danger">*</span></label>
+                            <div><input type="text" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email<span class="text-danger">*</span></label>
+                            <div><input type="text" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="home_phone">Home Phone<span class="text-danger">*</span></label>
+                            <div><input type="text" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="loan_amount">Loan Amount<span class="text-danger">*</span></label>
+                            <div><input type="text" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Property_value">Property Value<span class="text-danger">*</span></label>
+                            <div><input type="text" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="loan_type">Loan Type<span class="text-danger">*</span></label>
+                            <div><input type="text" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="credit_history">Credit History<span class="text-danger">*</span></label>
+                            <div><input type="text" class="form-control"></div>
+                        </div>
+                        <button type="submit" class="sub-bg mb-2 mt-4 w-100 btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- model popup End-->
     <!-- ======= Footer ======= -->
     <div id="footer"></div>
 
@@ -275,6 +369,19 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>let slider = document.getElementById('slider')
+        let selector = document.getElementById('selector')
+        let selectValue = document.getElementById('selectValue')
+        let progressBar = document.getElementById('progressBar')
+
+        selectValue.innerHTML = slider.value
+
+        slider.oninput = function () {
+            selectValue.innerHTML = this.value
+            selector.style.left = this.value + '%'
+            progressBar.style.width = this.value + '%'
+        }
+    </script>
 </body>
 
 </html>
