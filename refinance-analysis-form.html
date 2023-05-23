@@ -102,9 +102,8 @@
                 </div>
                 <!-- <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton> -->
                 <!-- get quote start -->
-                <button class="ml10 btn btn-secondary m-lg-3 drop-btn-clr dropdown-toggle" type="button"
-                    data-bs-toggle="modal" data-bs-target="#quoteContent" aria-expanded="false">
-                    Get a Quote
+                <button class="ml10 btn btn-secondary m-lg-3 drop-btn-clr" type="button">
+                    <a href="quote.html">Get a Quote</a>
                 </button>
                 <!-- get quote end -->
 
@@ -129,7 +128,7 @@
         <div class="container py-5 pt-lg-0">
             <div class="row gx-0">
                 <div class="wow zoomIn" data-wow-delay="0.1s">
-                    <form class="g-3 mt-4 mb-4 p-4 row quick-quote-form">
+                    <form class="g-3 mt-4 mb-4 p-4 row ">
                         <h5 class="modal-title text-center mb-3 mt-3">GET YOUR FREE REFINANCE ANALYSIS</h5>
                         <div class="form-group">
                             <label for="full_name">Full Name<span class="text-danger">*</span></label>
@@ -144,13 +143,17 @@
                             <div><input type="text" class="form-control"></div>
                         </div>
                         <div class="form-group">
+                            <label for="number">Zip Code<span class="text-danger">*</span></label>
+                            <div><input type="text" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
                             <label for="Great! What type of property are you refinancing?">Great! What type of property
                                 are you refinancing?<span class="text-danger">*</span></label>
                             <select class="form-select" aria-label="Default select example">
-                                <option selected value="1">Single family home</option>
-                                <option value="2">condominium</option>
-                                <option value="3">townhome</option>
-                                <option value="4">multi-family home</option>
+                                <option selected value="SingleFamilyHome">Single family home</option>
+                                <option value="Condominium">Condominium</option>
+                                <option value="Townhome">Townhome</option>
+                                <option value="MultiFamilyHhome">Multi-family home</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -176,28 +179,17 @@
                         <div class="form-group">
                             <label for="Please estimate the value of the property">Please estimate the value of the
                                 property<span class="text-danger">*</span></label>
-                                <div class="main w-100">
-                                    <input type="range" min="0" max="100" value="70" id="slider">
-                                    <div id="selector">
-                                        <div class="selectBtn"></div>
-                                        <div id="selectValue"></div>
-                                    </div>
-                                    <div id="progressBar"></div>
-                                </div>
+                                <div><input type="number" class="form-control"></div>
                         </div>
                         <div class="form-group">
                             <label for="What is the remaining 1st mortgage balance?">What is the remaining 1st mortgage
                                 balance?<span class="text-danger">*</span></label>
-                            <input type="range" value="44" min="1" max="100"
-                                oninput="this.nextElementSibling.value = this.value">
-                            <output>44</output>
+                                <div><input type="number" class="form-control"></div>
                         </div>
                         <div class="form-group">
                             <label for="What is your 1st mortgage interest rate?">What is your 1st mortgage interest
                                 rate?<span class="text-danger">*</span></label>
-                            <input type="range" value="24" min="1" max="100"
-                                oninput="this.nextElementSibling.value = this.value">
-                            <output>24</output>
+                                <div><input type="number" class="form-control"></div>
                         </div>
                         <div class="form-group">
                             <label for="How will this property be used?">How will this property be used?<span
@@ -227,9 +219,7 @@
                         <div class="form-group">
                             <label for="Would you like to borrow additional cash?">Would you like to borrow additional
                                 cash?<span class="text-danger">*</span></label>
-                            <input type="range" value="84" min="1" max="100"
-                                oninput="this.nextElementSibling.value = this.value">
-                            <output>84</output>
+                                <div><input type="number" class="form-control"></div>
                         </div>
                         <div class="form-group">
                             <label for="What is your employment status?">What is your employment status?<span
@@ -261,16 +251,12 @@
                         <div class="form-group">
                             <label for="What is your gross annual household income?">What is your gross annual household
                                 income?<span class="text-danger">*</span></label>
-                            <input type="range" value="24" min="1" max="100"
-                                oninput="this.nextElementSibling.value = this.value">
-                            <output>24</output>
+                                <div><input type="number" class="form-control"></div>
                         </div>
                         <div class="form-group">
                             <label for="What is your gross annual household income?">What is your gross annual household
                                 income?<span class="text-danger">*</span></label>
-                            <input type="range" value="64" min="1" max="100"
-                                oninput="this.nextElementSibling.value = this.value">
-                            <output>64</output>
+                                <div><input type="number" class="form-control"></div>
                         </div>
                         <div class="form-group">
                             <label for="Do you currently have a FHA loan? ">Do you currently have a FHA loan? <span
@@ -300,56 +286,6 @@
     <!-- pre-approval form end -->
 
 
-    <!-- model popup start-->
-    <div class="modal" tabindex="-1" role="dialog" id="quoteContent">
-        <div class="modal-dialog  modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body modal-popop-centered drop-style">
-                    <button type="button" class="mb-3 mt-3 close close-model" aria-label="Close"
-                        data-bs-dismiss="modal">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                    <h5 class="modal-title text-center mb-3 mt-3">GET A QUICK QUOTE</h5>
-                    <form class="g-3 row quick-quote-form">
-                        <div class="form-group">
-                            <label for="first_name">First Name<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="last_name">Last Name<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="home_phone">Home Phone<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="loan_amount">Loan Amount<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="Property_value">Property Value<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="loan_type">Loan Type<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="credit_history">Credit History<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <button type="submit" class="sub-bg mb-2 mt-4 w-100 btn btn-primary">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- model popup End-->
     <!-- ======= Footer ======= -->
     <div id="footer"></div>
 

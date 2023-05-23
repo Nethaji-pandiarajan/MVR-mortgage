@@ -105,9 +105,8 @@
                 </div>
                 <!-- <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton> -->
                 <!-- get quote start -->
-                <button class="ml10 btn btn-secondary m-lg-3 drop-btn-clr dropdown-toggle" type="button"
-                    data-bs-toggle="modal" data-bs-target="#quoteContent" aria-expanded="false">
-                    Get a Quote
+                <button class="ml10 btn btn-secondary m-lg-3 drop-btn-clr" type="button">
+                    <a href="quote.html">Get a Quote</a>
                 </button>
                 <!-- get quote end -->
 
@@ -134,6 +133,22 @@
                 <div class="wow zoomIn" data-wow-delay="0.1s">
                     <form class="g-3 mt-4 mb-4 p-4 row quick-quote-form">
                         <h5 class="modal-title text-center mb-3 mt-3">HOME ESTIMATE ANALYSIS LETTER</h5>
+                        <div class="form-group">
+                            <label for="full_name">What is your full name<span class="text-danger">*</span></label>
+                            <div><input type="text" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="full_name">What is your email address?<span class="text-danger">*</span></label>
+                            <div><input type="text" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="full_name">What is your phone number?<span class="text-danger">*</span></label>
+                            <div><input type="text" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="number">Zip Code<span class="text-danger">*</span></label>
+                            <div><input type="text" class="form-control"></div>
+                        </div>
                         <div class="form-group">
                             <label for="Great! What type of property are you refinancing?">Great!type of property<span
                                     class="text-danger">*</span></label>
@@ -234,14 +249,7 @@
                         <div class="form-group">
                             <label for="Please estimate the value of the property">How many square feet?<span
                                     class="text-danger">*</span></label>
-                            <div class="main w-100">
-                                <input type="range" min="0" max="100" value="50" id="slider">
-                                <div id="selector">
-                                    <div class="selectBtn"></div>
-                                    <div id="selectValue"></div>
-                                </div>
-                                <div id="progressBar"></div>
-                            </div>
+                                    <div><input type="number" class="form-control"></div>
                         </div>
                         <div class="form-group">
                             <label for="What year did you purchase your home?">What is the lot size?<span
@@ -275,9 +283,7 @@
                         <div class="form-group">
                             <label for="What is the remaining 1st mortgage balance?">What is the estimated property
                                 value?<span class="text-danger">*</span></label>
-                            <input type="range" value="44" min="1" max="100"
-                                oninput="this.nextElementSibling.value = this.value">
-                            <output>44</output>
+                                <div><input type="number" class="form-control"></div>
                         </div>
                         <div class="form-group">
                             <label for="What year did you purchase your home?">Are there late payments?<span
@@ -329,18 +335,7 @@
                                     class="text-danger">*</span></label>
                             <input type="text" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label for="full_name">What is your full name<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="full_name">What is your email address?<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="full_name">What is your phone number?<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
+                        
 
                         <button type="submit" class="sub-bg mb-2 mt-4 w-100 btn btn-primary">Submit</button>
                     </form>
@@ -350,57 +345,6 @@
     </div>
     <!-- pre-approval form end -->
 
-    <!-- model popup start-->
-    <div class="modal" tabindex="-1" role="dialog" id="quoteContent">
-        <div class="modal-dialog  modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body modal-popop-centered drop-style">
-                    <button type="button" class="mb-3 mt-3 close close-model" aria-label="Close"
-                        data-bs-dismiss="modal">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                    <h5 class="modal-title text-center mb-3 mt-3">GET A QUICK QUOTE</h5>
-                    <form class="g-3 row quick-quote-form">
-                        <div class="form-group">
-                            <label for="first_name">First Name<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="last_name">Last Name<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="home_phone">Home Phone<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="loan_amount">Loan Amount<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="Property_value">Property Value<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="loan_type">Loan Type<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="credit_history">Credit History<span class="text-danger">*</span></label>
-                            <div><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="text-center"><button type="submit"
-                                class="btn btn-primary mb-2 mt-4 sub-bg w-25">Submit</button></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- model popup End-->
     <!-- ======= Footer ======= -->
     <div id="footer"></div>
 
