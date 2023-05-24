@@ -206,7 +206,7 @@ h6,
   }
 
   .sticky-top.navbar-dark {
-    position: fixed;
+    position: fixed !important;
     background: #ffffff;
   }
 
@@ -579,7 +579,7 @@ h6,
   margin-top: 0.125rem;
 }
 .sub-bg {
-  background-color: var(--orange) !important;
+  background-color: var(--primary) !important;
   border-radius: 30px;
   width: 345px;
   text-align: center;
@@ -592,9 +592,7 @@ h6,
   font-family: "Nunito", sans-serif;
   font-size: 16px;
 }
-.quick-quote-form .form-group {
-  width: 50% !important;
-}
+
 .form-group input,
 .form-select {
   background-color: #fff;
@@ -782,4 +780,9 @@ canvas {
 
 .rating-color{
   color:#fbc634 !important;
+}
+.chart-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
