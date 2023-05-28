@@ -580,8 +580,6 @@ h6,
 }
 .sub-bg {
   background-color: var(--primary) !important;
-  border-radius: 30px;
-  width: 345px;
   text-align: center;
 }
 .sub-bg a {
@@ -592,7 +590,9 @@ h6,
   font-family: "Nunito", sans-serif;
   font-size: 16px;
 }
-
+i {
+  color:#dbdbdb;;
+}
 .form-group input,
 .form-select {
   background-color: #fff;
@@ -656,7 +656,6 @@ path {
 #loan-form p {
   font-weight: bold;
   font-size: 18px;
-  margin-left: 35px;
   padding: 10px;
   border-bottom: 1px solid #efe6e6;
   color: var(--primary);
