@@ -134,13 +134,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="full_name">Full Name<span class="text-danger">*</span></label>
-                                    <div><input type="text" class="form-control"></div>
+                                    <div><input type="text" class="form-control" id="fullName"></div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="email">Email Address<span class="text-danger">*</span></label>
-                                    <div><input type="text" class="form-control"></div>
+                                    <div><input type="text" class="form-control" id="emailAddress"></div>
                                 </div>
                             </div>
                         </div>
@@ -148,13 +148,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="number">Phone Number<span class="text-danger">*</span></label>
-                                    <div><input type="text" class="form-control"></div>
+                                    <div><input type="text" class="form-control" id="phoneNumber"></div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="number">Zip Code<span class="text-danger">*</span></label>
-                                    <div><input type="text" class="form-control"></div>
+                                    <div><input type="text" class="form-control" id="zipCode"></div>
                                 </div>
                             </div>
                         </div>
@@ -162,7 +162,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Great! What type of property are you refinancing?">Property Type<span class="text-danger">*</span></label>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" aria-label="Default select example" id="propertyType">
                                         <option selected value="SingleFamilyHome">Single Family Home</option>
                                         <option value="Condominium">Condominium</option>
                                         <option value="Townhome">Townhome</option>
@@ -174,7 +174,7 @@
                                 <div class="form-group">
                                     <label for="Estimate your credit score">Credit Score<span
                                             class="text-danger">*</span></label>
-                                    <div><input type="number" class="form-control"></div>
+                                    <div><input type="text" class="form-control" id="creditScore"></div>
                                 </div>
                             </div>
                         </div>
@@ -182,13 +182,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="What year did you purchase your home?">Purchase Year</label>
-                                    <div><input type="number" class="form-control"></div>
+                                    <div><input type="text" class="form-control" id="purchaseYear"></div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Please estimate the value of the property">Estimated Property Value<span class="text-danger">*</span></label>
-                                    <div><input type="number" class="form-control"></div>
+                                    <div><input type="text" class="form-control" id="estimatedPropertyValue"></div>
                                 </div>
                             </div>
                         </div>
@@ -196,13 +196,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="What is the remaining 1st mortgage balance?">Remaining Mortgage Balance<span class="text-danger">*</span></label>
-                                    <div><input type="number" class="form-control"></div>
+                                    <div><input type="text" class="form-control" id="remainingMoratgeBalance"></div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="What is your 1st mortgage interest rate?">Current Mortgage Interest Rate<span class="text-danger">*</span></label>
-                                    <div><input type="number" class="form-control"></div>
+                                    <div><input type="text" class="form-control" id="curentMortageInterestRate"></div>
                                 </div>
                             </div>
                         </div>
@@ -211,7 +211,7 @@
                                 <div class="form-group">
                                     <label for="How will this property be used?">How will this property be used?<span
                                             class="text-danger">*</span></label>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" aria-label="Default select example" id="propertyBeUsed">
                                         <option selected value="1">Primary Home</option>
                                         <option value="2">Secondary Home</option>
                                         <option value="3">Rental Property</option>
@@ -220,11 +220,11 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="Do you have a second mortgage?">Do you have a second mortgage?<span
+                                    <label for="Do you have a second mortgage?">Do you have a second mortgage on this property?<span
                                             class="text-danger">*</span></label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected value="1">Yes</option>
-                                        <option value="2">No</option>
+                                    <select class="form-select" aria-label="Default select example" id="secondMoratage">
+                                        <option value="1">Yes</option>
+                                        <option selected value="2">No</option>
                                     </select>
                                 </div>
                             </div>
@@ -235,14 +235,14 @@
                                     <label for="Would you like to borrow additional cash?">Would you like to borrow
                                         additional
                                         cash?<span class="text-danger">*</span></label>
-                                    <div><input type="number" class="form-control"></div>
+                                    <div><input type="text" class="form-control" id="borrowAdditionalCash"></div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="What is your employment status?">What is your employment status?<span
                                             class="text-danger">*</span></label>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" aria-label="Default select example" id="yourEmployeeStatus">
                                         <option selected value="1">Employed</option>
                                         <option value="2">Not Employed</option>
                                         <option value="3">Self Employed</option>
@@ -255,22 +255,13 @@
                         <div class="row mt-2">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="Bankruptcy, short sale, or foreclosure in the last 3 years?">Bankruptcy,
-                                        short
-                                        sale, or foreclosure in the last 3 years?<span
-                                            class="text-danger">*</span></label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected value="1">Yes</option>
-                                        <option value="2">No</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
                                     <label for="What is your gross annual household income?">Qualifying Annual Income<span class="text-danger">*</span></label>
-                                    <div><input type="number" class="form-control"></div>
+                                    <div><input type="text" class="form-control" id="qualifyingAnnualIncome"></div>
                                 </div>
                             </div>
+                            <!-- <div class="col-md-6">
+                               
+                            </div> -->
                         </div>
                         <div class="text-center"><button type="submit"
                                 class="btn btn-primary mb-2 mt-4 sub-bg w-25">Submit</button></div>

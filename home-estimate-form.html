@@ -138,14 +138,14 @@
                                 <div class="form-group">
                                     <label for="full_name">What is your full name<span
                                             class="text-danger">*</span></label>
-                                    <div><input type="text" class="form-control"></div>
+                                    <div><input type="text" class="form-control" id="yourFullName"></div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="full_name">What is your email address?<span
                                             class="text-danger">*</span></label>
-                                    <div><input type="text" class="form-control"></div>
+                                    <div><input type="text" class="form-control" id="yourEmailAddress"></div>
                                 </div>
                             </div>
                         </div>
@@ -154,13 +154,13 @@
                                 <div class="form-group">
                                     <label for="full_name">What is your phone number?<span
                                             class="text-danger">*</span></label>
-                                    <div><input type="text" class="form-control"></div>
+                                    <div><input type="text" class="form-control" id="yourPhoneNumber"></div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="number">Property Address<span class="text-danger">*</span></label>
-                                    <div><input type="text" class="form-control"></div>
+                                    <div><input type="text" class="form-control" id="propertyAddress"></div>
                                 </div>
                             </div>
                         </div>
@@ -168,7 +168,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Great! What type of property are you refinancing?">Property Type<span class="text-danger">*</span></label>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" aria-label="Default select example" id="yourPropertyType">
                                         <option selected value="1">Single Family Home</option>
                                         <option value="4">Multi-Family Home</option>
                                         <option value="2">Condominium</option>
@@ -178,8 +178,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="What year did you purchase your home?"> Build Year<span class="text-danger">*</span></label>
-                                    <div><input type="number" class="form-control"></div>
+                                    <label for="What year did you purchase your home?">Year Built<span class="text-danger">*</span></label>
+                                    <div><input type="text" class="form-control" id="buildYear"></div>
                                 </div>
                             </div>
                         </div>
@@ -187,7 +187,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="What year did you purchase your home?">How will this property be used?<span class="text-danger">*</span></label>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" aria-label="Default select example" id="yourPropertyBeUsed">
                                         <option selected value="1">Primary Residence</option>
                                         <option value="2">Secondary Residence</option>
                                         <option value="3">Investment Property</option>
@@ -197,7 +197,19 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="number">What is the reason for the request?<span class="text-danger">*</span></label>
-                                    <div><input type="text" class="form-control"></div>
+                                    <div><select class="form-select" aria-label="Default select example" id="yourPropertyBeUsed">
+                                        <option selected value="1">Selling Property</option>
+                                        <option value="2">Refinancing Property</option>
+                                        <option value="3">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="credit_history">Additional Information<span class="text-danger">*</span></label>
+                                    <div><input type="text" class="form-control" id="additionalInformation"></div>
                                 </div>
                             </div>
                         </div>
