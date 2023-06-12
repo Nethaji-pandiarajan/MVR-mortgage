@@ -803,3 +803,14 @@ canvas {
 .add-textbox {
   display: flex;align-items:center;justify-content: end;
 }
+.todayrate-table {
+  font-size: 10px;
+}
+.todayrate-table td{
+  border:1px solid #666666
+}
+.todayrate-table-td {
+  color: #404040;
+  font-weight: bold;
+  background-color: #eaeaea ;
+}
