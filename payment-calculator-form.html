@@ -45,13 +45,6 @@
         $(document).ready(function () {
             $("#header").load("header.html");
             $("#footer").load("footer.html");
-            
-            $("#datepicker").datepicker( {
-                format: "mm-yyyy",
-                startView: "months", 
-                minViewMode: "months"
-        });
-        
         });
 
        
@@ -167,33 +160,33 @@
 
                                                     <div class="form-group row">
                                                         <div class="col-sm-6" style="position: relative;">
-                                                            <label for="inputAddressLine1">Property Value/Purchase Price</label>
-                                                            <input type="text" class="form-control inpCorr" id="inputAddressLine1">
+                                                            <label>Property Value/Purchase Price</label>
+                                                            <input type="text" class="form-control inpCorr" id="propertyPurchase Price">
                                                             <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-dollar-sign"></i></span>
                                                         </div>
                                                         <div class="col-sm-6" style="position: relative;">
-                                                            <label for="inputAddressLine2">Down Payment</label>
-                                                            <input type="text" class="form-control inpCorr" id="inputAddressLine2">
+                                                            <label>Down Payment</label>
+                                                            <input type="text" class="form-control inpCorr" id="downPayment">
                                                             <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-dollar-sign"></i></span>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <div class="col-sm-6" style="position: relative;">
-                                                            <label for="inputAddressLine1">Loan Amount
+                                                            <label>Loan Amount
                                                             </label>
-                                                            <input type="text" class="form-control inpCorr" id="inputAddressLine1">
+                                                            <input type="text" class="form-control inpCorr" id="loanAmount">
                                                             <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-dollar-sign"></i></span>
                                                         </div>
                                                         <div class="col-sm-6" style="position: relative;">
-                                                            <label for="inputAddressLine2">Interest Rate</label>
-                                                            <input type="text" class="form-control inpCorr" id="inputAddressLine2">
+                                                            <label>Interest Rate</label>
+                                                            <input type="text" class="form-control inpCorr" id="interestRate">
                                                             <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-percentage"></i></span>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <div class="col-sm-6" style="position: relative;">
-                                                            <label for="inputAddressLine1">Loan Term</label>
-                                                            <select class="input" id="amount" aria-label="Default select example">
+                                                            <label>Loan Term</label>
+                                                            <select class="input" id="loanTerm" aria-label="Default select example">
                                                                 <option selected value="1">30 Year</option>
                                                                 <option value="2">20 Year</option>
                                                                 <option value="3">15 Year</option>
@@ -202,15 +195,15 @@
                                                             <span style="position: absolute;top: 40px;right: 20px;"><i class="fa fa-arrow-down"></i></span>
                                                         </div>
                                                         <div class="col-sm-6" style="position: relative;">
-                                                            <label for="inputAddressLine2">PMI / Month</label>
-                                                            <input type="text" class="form-control inpCorr" id="inputAddressLine2">
+                                                            <label>PMI / Month</label>
+                                                            <input type="text" class="form-control inpCorr" id="pmiMonth">
                                                             <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-dollar-sign"></i></span>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <div class="col-sm-6" style="position: relative;">
-                                                            <label for="inputAddressLine1">Payment Frequency</label>
-                                                            <select class="input" id="amount" aria-label="Default select example">
+                                                            <label>Payment Frequency</label>
+                                                            <select class="input" id="paymentFrequency" aria-label="Default select example">
                                                                 <option selected value="1">Monthly</option>
                                                                 <option value="2">Semi-Monthly</option>
                                                                 <option value="3">Biweekly</option>
@@ -218,9 +211,8 @@
                                                             <span style="position: absolute;top: 40px;right: 20px;"><i class="fa fa-arrow-down"></i></span>
                                                         </div>
                                                         <div class="col-sm-6" style="position: relative;">
-                                                            <label for="inputAddressLine2">Start Month & Year</label>
-                                                            <input type="text" class="form-control inpCorr" data-date="02-2012"  data-date-format="mm/yyyy" id="datepicker">
-                                                            <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-calendar"></i></span>
+                                                            <label>Start Month & Year</label>
+                                                            <input type="month" class="form-control inpCorr" id="datepicker">
                                                         </div>
                                                     </div>
 
@@ -231,20 +223,20 @@
                                                     
                                                     <div class="form-group row">
                                                         <div class="col-sm-6" style="position: relative;">
-                                                            <label for="inputAddressLine1">Property Taxes / Year</label>
-                                                            <input type="text" class="form-control inpCorr" id="inputAddressLine1">
+                                                            <label>Property Taxes / Year</label>
+                                                            <input type="text" class="form-control inpCorr" id="propertyTaxes ">
                                                             <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-dollar-sign"></i></span>
                                                         </div>
                                                         <div class="col-sm-6" style="position: relative;">
                                                             <label for="inputAddressLine2">Home Insurance / Year</label>
-                                                            <input type="text" class="form-control inpCorr" id="inputAddressLine2">
+                                                            <input type="text" class="form-control inpCorr" id="homeInsurance">
                                                             <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-dollar-sign"></i></span>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <div class="col-sm-6" style="position: relative;">
-                                                            <label for="inputAddressLine1">HOA Dues / Month</label>
-                                                            <input type="text" class="form-control inpCorr" id="inputAddressLine1">
+                                                            <label>HOA Dues / Month</label>
+                                                            <input type="text" class="form-control inpCorr" id="hqaDues ">
                                                             <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-dollar-sign"></i></span>
                                                         </div>
                                                     </div>
@@ -257,8 +249,8 @@
 
                                                     <div class="form-group row">
                                                         <div class="col-sm-6" style="position: relative;">
-                                                            <label for="inputAddressLine1">Additional Monthly Principal Payment</label>
-                                                            <input type="text" class="form-control inpCorr" id="inputAddressLine1">
+                                                            <label>Additional Monthly Principal Payment</label>
+                                                            <input type="text" class="form-control inpCorr" id="additionalMonthlyPrincipalPayment">
                                                             <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-dollar-sign"></i></span>
                                                         </div>
                                                     </div>
