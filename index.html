@@ -951,7 +951,7 @@ always been happy and satisfied. Highly recommend him!
             </div>
             <div class="row g-5">
                 <div class="col-lg-12 wow slideInUp" data-wow-delay="0.3s">
-                    <form>
+                    <form onsubmit="sendMail(); reset(); return false">
                         <div class="row g-3">
                             <div class="col-md-6 px-4">
                                 <input type="text" class="form-control border-2 bg-light px-4" id="contactName" placeholder="Your Name"
@@ -1009,9 +1009,12 @@ always been happy and satisfied. Highly recommend him!
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="Validation/validation.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
 </body>
 
 </html>

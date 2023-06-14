@@ -232,10 +232,14 @@
                         <div class="row mt-2">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="Would you like to borrow additional cash?">Would you like to borrow
+                                    <label for="Do you have a second mortgage?">Would you like to borrow
                                         additional
-                                        cash?<span class="text-danger">*</span></label>
-                                    <div><input type="text" class="form-control" id="borrowAdditionalCash"></div>
+                                        cash?<span
+                                            class="text-danger">*</span></label>
+                                    <select class="form-select" aria-label="Default select example" id="borrowAdditionalCash">
+                                        <option value="1">Yes</option>
+                                        <option selected value="2">No</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -289,6 +293,8 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="Validation/validation.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
