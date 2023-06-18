@@ -40,6 +40,13 @@
             $("#footer").load("footer.html");
         });
     </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("rhQR4_DNJlQzeUm78");
+        })();
+    </script>
 </head>
 
 <body>
@@ -133,7 +140,7 @@
         <div class="container py-5 pt-lg-0">
             <div class="row gx-0">
                 <div class="wow zoomIn" data-wow-delay="0.1s">
-                    <form class="g-3 mt-4 mb-4 p-4 row  zoomIn" data-wow-delay="0.4s">
+                    <form onsubmit="checkpreApprovalLetterValidation(); reset(); return false" class="g-3 mt-4 mb-4 p-4 row  zoomIn" data-wow-delay="0.4s">
                         <h5 class="modal-title text-center mb-3 mt-3">Get Your FREE Pre-Approval Letter</h5>
                         <div class="row">
                             <div class="col-md-6">

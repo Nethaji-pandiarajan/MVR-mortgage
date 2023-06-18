@@ -41,11 +41,13 @@
         });
     </script>
 
-    <style>
-        .btn-sub{
-            background-color: ;
-        }
-    </style>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init("rhQR4_DNJlQzeUm78");
+    })();
+</script>
 
 
 </head>
@@ -174,7 +176,7 @@
                 <div class="col-lg-7">
                     <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn"
                         data-wow-delay="0.9s">
-                        <form onsubmit="sendQuoteMail(); reset(); return false">
+                        <form onsubmit="CheckQuoteValidation(); reset(); return false">
                             <div class="row g-3">
                                     <div class="col-xl-6">
                                     <input type="text" class="form-control bg-light border-0" id="firstName" placeholder="First Name"

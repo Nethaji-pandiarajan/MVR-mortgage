@@ -40,9 +40,14 @@
             $("#footer").load("footer.html");
         });
     </script>
-    <style>
-
-    </style>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("rhQR4_DNJlQzeUm78");
+        })();
+    </script>
+    
 </head>
 
 <body>
@@ -52,10 +57,6 @@
         <div class="spinner"></div>
     </div>
     <!-- Spinner End -->
-
-
-
-
 
     <!-- ======= Header ======= -->
     <div id="header"></div>
@@ -131,7 +132,7 @@
         <div class="container py-5 pt-lg-0">
             <div class="row gx-0">
                 <div class="wow zoomIn" data-wow-delay="0.1s">
-                    <form class="g-3 mt-4 mb-4 p-4 row quick-quote-form">
+                    <form onsubmit="CheckHomeValueEstimationValidation(); reset(); return false" class="g-3 mt-4 mb-4 p-4 row quick-quote-form">
                         <h5 class="modal-title text-center mb-3 mt-3">HOME ESTIMATE ANALYSIS LETTER</h5>
                         <div class="row">
                             <div class="col-md-6">
