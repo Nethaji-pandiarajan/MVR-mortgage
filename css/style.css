@@ -637,7 +637,7 @@ path {
 }
 @media (min-width: 767.98px) {
   .footer-about {
-    margin-bottom: -75px;
+    /* margin-bottom: -75px; */
   }
 }
 
