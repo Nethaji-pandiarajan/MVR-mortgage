@@ -35,7 +35,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
 
-    
+
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.js"
@@ -47,14 +47,12 @@
             $("#footer").load("footer.html");
         });
 
-       
+
     </script>
     <style>
-        .inpCorr{
+        .inpCorr {
             padding-left: 22px;
         }
-            
-
     </style>
 </head>
 
@@ -129,7 +127,7 @@
         <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
             <div class="row py-5">
                 <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                    <h1 class="display-4 text-white animated zoomIn">Payment Calculator Letter Form</h1>
+                    <h1 class="display-4 text-white animated zoomIn">Monthly Payment Calculator</h1>
                     <a href="index.html" class="h5 text-white">Home</a>
                     <i class="far fa-circle text-white px-2"></i>
                     <a href="payment-calculator.html" class="h5 text-white">Payment Calculator</a>
@@ -154,65 +152,80 @@
                                 <div class="column is-three-quarters w-100">
                                     <div class="card">
                                         <div class="card-content">
-                                            <form id="loan-form" class="p-3">
+                                           
                                                 <div class="w-100">
                                                     <p class="mb-3">Mortgage Details</p>
 
                                                     <div class="form-group row">
                                                         <div class="col-sm-6" style="position: relative;">
                                                             <label>Property Value/Purchase Price</label>
-                                                            <input type="text" class="form-control inpCorr" id="propertyPurchase Price">
-                                                            <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-dollar-sign"></i></span>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="propertyPurchasePrice">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-dollar-sign"></i></span>
                                                         </div>
                                                         <div class="col-sm-6" style="position: relative;">
                                                             <label>Down Payment</label>
-                                                            <input type="text" class="form-control inpCorr" id="downPayment">
-                                                            <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-dollar-sign"></i></span>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="downPayment">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-dollar-sign"></i></span>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <div class="col-sm-6" style="position: relative;">
                                                             <label>Loan Amount
                                                             </label>
-                                                            <input type="text" class="form-control inpCorr" id="loanAmount">
-                                                            <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-dollar-sign"></i></span>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="loanAmount">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-dollar-sign"></i></span>
                                                         </div>
                                                         <div class="col-sm-6" style="position: relative;">
                                                             <label>Interest Rate</label>
-                                                            <input type="text" class="form-control inpCorr" id="interestRate">
-                                                            <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-percentage"></i></span>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="interestRate">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <div class="col-sm-6" style="position: relative;">
                                                             <label>Loan Term</label>
-                                                            <select class="input" id="loanTerm" aria-label="Default select example">
-                                                                <option selected value="1">30 Year</option>
-                                                                <option value="2">20 Year</option>
-                                                                <option value="3">15 Year</option>
-                                                                <option value="3">10 Year</option>
+                                                            <select class="input" id="loanTerm"
+                                                                aria-label="Default select example">
+                                                                <option selected value="30">30 Year</option>
+                                                                <option value="20">20 Year</option>
+                                                                <option value="15">15 Year</option>
+                                                                <option value="10">10 Year</option>
                                                             </select>
-                                                            <span style="position: absolute;top: 40px;right: 20px;"><i class="fa fa-arrow-down"></i></span>
+                                                            <span style="position: absolute;top: 40px;right: 20px;"><i
+                                                                    class="fa fa-arrow-down"></i></span>
                                                         </div>
                                                         <div class="col-sm-6" style="position: relative;">
                                                             <label>PMI / Month</label>
-                                                            <input type="text" class="form-control inpCorr" id="pmiMonth">
-                                                            <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-dollar-sign"></i></span>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="pmiMonth">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-dollar-sign"></i></span>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <div class="col-sm-6" style="position: relative;">
                                                             <label>Payment Frequency</label>
-                                                            <select class="input" id="paymentFrequency" aria-label="Default select example">
+                                                            <select class="input" id="paymentFrequency"
+                                                                aria-label="Default select example">
                                                                 <option selected value="1">Monthly</option>
                                                                 <option value="2">Semi-Monthly</option>
                                                                 <option value="3">Biweekly</option>
                                                             </select>
-                                                            <span style="position: absolute;top: 40px;right: 20px;"><i class="fa fa-arrow-down"></i></span>
+                                                            <span style="position: absolute;top: 40px;right: 20px;"><i
+                                                                    class="fa fa-arrow-down"></i></span>
                                                         </div>
                                                         <div class="col-sm-6" style="position: relative;">
                                                             <label>Start Month & Year</label>
-                                                            <input type="month" class="form-control inpCorr" id="datepicker">
+                                                            <input type="month" class="form-control inpCorr"
+                                                                id="datepicker">
                                                         </div>
                                                     </div>
 
@@ -220,27 +233,33 @@
                                                 </div>
                                                 <div class="w-100">
                                                     <p class="mb-3">Homeowner Expenses</p>
-                                                    
+
                                                     <div class="form-group row">
                                                         <div class="col-sm-6" style="position: relative;">
                                                             <label>Property Taxes / Year</label>
-                                                            <input type="text" class="form-control inpCorr" id="propertyTaxes ">
-                                                            <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-dollar-sign"></i></span>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="propertyTaxes">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-dollar-sign"></i></span>
                                                         </div>
                                                         <div class="col-sm-6" style="position: relative;">
                                                             <label for="inputAddressLine2">Home Insurance / Year</label>
-                                                            <input type="text" class="form-control inpCorr" id="homeInsurance">
-                                                            <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-dollar-sign"></i></span>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="homeInsurance">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-dollar-sign"></i></span>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <div class="col-sm-6" style="position: relative;">
                                                             <label>HOA Dues / Month</label>
-                                                            <input type="text" class="form-control inpCorr" id="hqaDues ">
-                                                            <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-dollar-sign"></i></span>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="hoaDues">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-dollar-sign"></i></span>
                                                         </div>
                                                     </div>
-                                                    
+
 
                                                 </div>
 
@@ -250,98 +269,31 @@
                                                     <div class="form-group row">
                                                         <div class="col-sm-6" style="position: relative;">
                                                             <label>Additional Monthly Principal Payment</label>
-                                                            <input type="text" class="form-control inpCorr" id="additionalMonthlyPrincipalPayment">
-                                                            <span style="position: absolute;top: 40px;left: 20px;"><i class="fa fa-dollar-sign"></i></span>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="additionalMonthlyPrincipalPayment">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-dollar-sign"></i></span>
                                                         </div>
                                                     </div>
-                                                    
+
                                                 </div>
 
-                                                <div class="text-center mt-4 mb-4"><button type="submit" class="btn btn-primary mb-2 mt-4 sub-bg col-sm-2">Calculate Mortgage</button></div>
-
-                                                
-
-
-                                                <div class="dark-bg wow fadeIn mt-3 mb-3 w-100"
-                                                    style="visibility: visible; animation-name: fadeIn;display: inline-block;">
-                                                    <div class="col-xs-12 fl col-sm-2 dark-orange lp-supercal-dark-orange text-center wow fadeIn"
-                                                        data-wow-delay="0.5s"
-                                                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
-                                                        <h3 style="width: 95%"> <span
-                                                                class="span-clr-cal u_monthlyPrincipalInterest">$</span><span
-                                                                id="u_monthlyPrincipalInterest"
-                                                                class="u_monthlyPrincipalInterest _lp-font-adapter span-clr-cal">1,288.37</span>
-                                                        </h3>
-                                                        <p> <span class="pf_label">Monthly</span> Principal <br>&amp;
-                                                            Interest</p>
-                                                    </div>
-                                                    <div class="col-xs-12 fl col-sm-2 dark-blue lp-supercal-dark-blue text-center wow fadeIn"
-                                                        data-wow-delay="0.5s"
-                                                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
-                                                        <h3 style="width: 100%"><span
-                                                                class="span-clr-cal u_monthlyExtraPayment">$</span><span
-                                                                id="u_monthlyExtraPayment"
-                                                                class="u_monthlyExtraPayment _lp-font-adapter span-clr-cal">0.00</span>
-                                                        </h3>
-                                                        <p> <span class="pf_label">Monthly</span> Extra <br>Payment</p>
-                                                    </div>
-                                                    <div class="col-xs-12 fl col-sm-2 dark-pink lp-supercal-dark-pink text-center wow fadeIn"
-                                                        data-wow-delay="0.5s"
-                                                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
-                                                        <h3 style="width: 100%"><span
-                                                                class="span-clr-cal u_monthlyPropertyTax">$</span><span
-                                                                id="u_monthlyPropertyTax"
-                                                                class="u_monthlyPropertyTax _lp-font-adapter span-clr-cal">250.00</span>
-                                                        </h3>
-                                                        <p> Property <br>Taxes</p>
-                                                    </div>
-                                                    <div class="col-xs-12 fl col-sm-2 dark-gren lp-supercal-dark-gren  text-center wow fadeIn"
-                                                        data-wow-delay="0.5s"
-                                                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
-                                                        <h3 style="width: 100%"><span
-                                                                class="span-clr-cal u_monthlyHomeownersInsurance">$</span><span
-                                                                id="u_monthlyHomeownersInsurance"
-                                                                class="u_monthlyHomeownersInsurance _lp-font-adapter span-clr-cal">37.50</span>
-                                                        </h3>
-                                                        <p> Homeowner's <br>Insurance</p>
-                                                    </div>
-                                                    <div class="col-xs-12 fl col-sm-2 dark-yellow lp-supercal-dark-yellow text-center wow fadeIn pt5"
-                                                        data-wow-delay="0.5s"
-                                                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
-                                                        <h3 style="width: 100%"><span
-                                                                class="span-clr-cal u_monthlyPmi">$</span><span
-                                                                id="u_monthlyPmi"
-                                                                class="u_monthlyPmi _lp-font-adapter span-clr-cal">0.00</span>
-                                                        </h3>
-                                                        <p> Private&nbsp;Mortgage <br> Insurance <br><span
-                                                                id="u_monthlyPmi_period"></span></p>
-                                                    </div>
-                                                    <div class="col-xs-12 fl col-sm-2 dark-pink lp-supercal-dark-pink text-center wow fadeIn"
-                                                        data-wow-delay="0.5s"
-                                                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
-                                                        <h3 style="width: 100%"><span
-                                                                class="span-clr-cal u_monthlyHoa">$</span><span
-                                                                id="u_monthlyHoa"
-                                                                class="u_monthlyHoa _lp-font-adapter span-clr-cal">0.00</span>
-                                                        </h3>
-                                                        <p> HOA <br>Fees</p>
-                                                    </div>
-                                                </div>
-                                                <!-- <p class="text-center w-100 p-mar mb-2 mt-2">Total Monthly
-                                                    Payment:$1,575.87</p> -->
-
-                                              
+                                                <div class="text-center mt-4 mb-4"><button onclick="totalAmountCalc()"
+                                                        class="calcAmount btn btn-primary mb-2 mt-4 sub-bg col-sm-2">Calculate
+                                                        Mortgage</button></div>
 
                                                 <p class="text-center w-100 p-mar mt-2">Total Monthly
                                                     Payment</p>
-                                                <p class="text-center w-100 p-mar mb-2 span-clr-cal ">
-                                                    $ 636,313.88</p>
+                                                <p class="text-center w-100 p-mar mb-2 span-clr-cal "
+                                                    id="totalMonthlyPay">
+                                                </p>
 
                                                 <!-- <div class="w-100 mt-4 mb-4">
                                                     <canvas id="myChart" class="w-100"></canvas>
                                                 </div> -->
 
-                                                <section id="s-team" class="section w-100 mb-2 mt-4" style="display: inline-block;border: 1px solid #dddddd;">
+                                                <section id="s-team" class="section w-100 mb-2 mt-4"
+                                                    style="display: inline-block;border: 1px solid #dddddd;">
                                                     <div class="b-skills">
                                                         <div class="container row">
                                                             <div class="col-sm-4 chart-center">
@@ -357,40 +309,46 @@
                                                                 </div>
                                                             </div>
                                                             <div class="col-sm-6">
-                                                                <p class="no-border">How is my Monthly Payment Calculated?</p>
+                                                                <p class="no-border">How is my Monthly Payment
+                                                                    Calculated?</p>
                                                                 <div class="pay-calc-percent-list row">
-                                                                    <div style="display: flex;align-items:center;" class="col-md-6">
+                                                                    <div style="display: flex;align-items:center;"
+                                                                        class="col-md-6">
                                                                         <span class="blue-clr-box"></span>
                                                                         <span class="ml-2">Principal & interest</span>
                                                                     </div>
-                                                                    <span class="col-md-6" style="text-align: end;">$2.743</span>
+                                                                    <span class="col-md-6" style="text-align: end;"
+                                                                        id="prinAndIn"></span>
                                                                 </div>
                                                                 <div class="pay-calc-percent-list row">
-                                                                    <div style="display: flex;align-items:center;" class="col-md-6">
+                                                                    <div style="display: flex;align-items:center;"
+                                                                        class="col-md-6">
                                                                         <span class="blue-clr-box"></span>
                                                                         <span class="ml-2">Homeowner's insurance</span>
                                                                     </div>
-                                                                   
-                                                                        <span class="col-md-6" style="text-align: end;">$2.743</span>
+
+                                                                    <span class="col-md-6" style="text-align: end;"
+                                                                        id="homeIns"></span>
                                                                 </div>
                                                                 <div class="pay-calc-percent-list row">
-                                                                    <div style="display: flex;align-items:center;" class="col-md-6">
+                                                                    <div style="display: flex;align-items:center;"
+                                                                        class="col-md-6">
                                                                         <span class="blue-clr-box"></span>
                                                                         <span class="ml-2">Property tax</span>
                                                                     </div>
-                                                                    <span class="col-md-6" style="text-align: end;">$2.743</span>
+                                                                    <span class="col-md-6" style="text-align: end;"
+                                                                        id="propTax"></span>
                                                                 </div>
                                                                 <div class="pay-calc-percent-list row">
-                                                                    <div style="display: flex;align-items:center;" class="col-md-6">
+                                                                    <div style="display: flex;align-items:center;"
+                                                                        class="col-md-6">
                                                                         <span class="blue-clr-box"></span>
                                                                         <span class="ml-2">HOA fees</span>
                                                                     </div>
-                                                                    <span class="col-md-6" style="text-align: end;">$2.743</span>
+                                                                    <span class="col-md-6" style="text-align: end;"
+                                                                        id="hoaFees"></span>
                                                                 </div>
-                                                                <div class="pay-calc-percent-list no-border row">
-                                                                    <span class="col-md-6">Total monthly payment</span>
-                                                                    <span class="col-md-6" style="text-align: end;">$2,743</span>
-                                                                </div>
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -398,8 +356,8 @@
 
                                                 <!-- <div class="text-center mt-4 mb-4"><button type="submit" class="btn btn-primary mb-2 mt-4 sub-bg col-sm-2">View Full Report</button></div> -->
 
-                                        
-                                            </form>
+
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -408,36 +366,6 @@
                 </div>
                 </section>
 
-
-
-                <!-- RESULTS -->
-                <section class="section">
-                    <h1 class="title ">Calculated Results</h1>
-                    <div class="columns is-multiline">
-
-                        <div class="mb-2 is-12-tablet is-6-desktop is-3-widescreen col-sm-4">
-                            <div class="notification is-primary has-text">
-                                <p id="monthlyPayment" class="title is-1">$</p>
-                                <p class="subtitle is-4">Monthly Payments</p>
-                            </div>
-                        </div>
-
-                        <div class="mb-2 is-12-tablet is-6-desktop is-3-widescreen col-sm-4">
-                            <div class="notification is-info has-text">
-                                <p id="totalInterest" class="title is-1">%</p>
-                                <p class="subtitle is-4">Total Interest</p>
-                            </div>
-                        </div>
-
-                        <div class="mb-2 is-12-tablet is-6-desktop is-3-widescreen col-sm-4">
-                            <div class="notification is-link has-text">
-                                <p id="totalPayment" class="title is-1">$</p>
-                                <p class="subtitle is-4">Total Amount</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
             </div>
         </div>
     </div>
@@ -486,6 +414,8 @@
                     $(this.el).find('.cs-chart-percent').text(Math.round(percent));
                 }
             });
+
+            
         });
     </script>
 
@@ -540,6 +470,7 @@
 
     </script> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Validation/calculation.js"></script>
     <script>
         var ctx = document.getElementById("myChart").getContext('2d');
         var myChart = new Chart(ctx, {
@@ -578,6 +509,9 @@
                 }
             }
         });
+
+
+
     </script>
 </body>
 
