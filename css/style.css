@@ -669,8 +669,8 @@ path {
   border: none !important;
 }
 canvas {
-  width: 230px;
-  height: 230px;
+  width: 300px;
+  height: 300px;
 }
 .column.is-3-widescreen {
   width: 33%;
@@ -807,10 +807,14 @@ canvas {
   font-size: 10px;
 }
 .todayrate-table td{
-  border:1px solid #666666
+  border:1px solid #666666;
+  line-height: 20px;
 }
 .todayrate-table-td {
-  color: #404040;
+  color: var(--light);
   font-weight: bold;
-  background-color: #eaeaea ;
+  background-color: var(--primary) ;
+}
+.today-rate-head-clr{
+  color: var(--orange) !important;
 }

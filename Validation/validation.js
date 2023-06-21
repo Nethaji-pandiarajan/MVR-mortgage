@@ -86,15 +86,18 @@ function CheckhomeContactValidation() {
         onlyCharacters(subject);
     }
 
-    var inputs = [{
-        "subject": subject,
-        "message": Message
-    }]
+    var message = "subject :" +subject + "," + "message :" + Message;
 
+    createEmailParam(Name,email,message);
+
+}
+
+function createEmailParam(name,email,message){
+    
     var params = {
-        name: Name,
+        name: name,
         email: email,
-        message: inputs
+        message: message
     }
 
     sendingMail(params);
@@ -167,21 +170,17 @@ function CheckQuoteValidation() {
     var name = firstName + " " + lastName
 
 
-    var inputs = [{
-        "Phone": Phone,
-        "loanAmount": loanAmount,
-        "propertyValue": propertyValue,
-        "loanTerm": loanTerm,
-        "creditHistroy": creditHistroy,
-    }]
+    // var inputs = [{
+    //     "Phone": Phone,
+    //     "loanAmount": loanAmount,
+    //     "propertyValue": propertyValue,
+    //     "loanTerm": loanTerm,
+    //     "creditHistroy": creditHistroy,
+    // }]
 
-    var params = {
-        name: name,
-        email: email,
-        message: inputs
-    }
+    var message = "Phone :" + Phone + "," + "loanAmount :" + loanAmount + "," + "propertyValue: " + propertyValue + "," + "loanTerm :" + loanTerm + "," +"creditHistroy:" + creditHistroy;
 
-    sendingMail(params);
+    createEmailParam(name,email,message);
 
 }
 
@@ -243,23 +242,19 @@ function CheckHomeValueEstimationValidation() {
         onlyCharacters(additionInfo);
     }
 
-    var inputs = [{
-        "Phone": phoneNumber,
-        "propertyAddress": propertyAddress,
-        "propertyType": propertyType,
-        "builtYear": builtYear,
-        "propertyUsed": propertyUsed,
-        "resonForRequest": resonForRequest,
-        "additionInfo": additionInfo
-    }]
+    // var inputs = [{
+    //     "Phone": phoneNumber,
+    //     "propertyAddress": propertyAddress,
+    //     "propertyType": propertyType,
+    //     "builtYear": builtYear,
+    //     "propertyUsed": propertyUsed,
+    //     "resonForRequest": resonForRequest,
+    //     "additionInfo": additionInfo
+    // }]
 
-    var params = {
-        name: fullName,
-        email: email,
-        message: inputs
-    }
+    var message = "Phone :" + phoneNumber + "," + "propertyAddress :" + propertyAddress + "," + "propertyType: " + propertyType + "," + "builtYear :" + builtYear + "," +"propertyUsed:" + propertyUsed +","+ "resonForRequest:" + resonForRequest + ","+ "additionInfo:" +additionInfo;
 
-    sendingMail(params);
+    createEmailParam(name,email,message);
 
 }
 
@@ -363,30 +358,29 @@ function checkRefinanceAnalysisValidation() {
         numberValidation(qualifyingAnnualIncome);
     }
 
-    var inputs = [{
-        "Phone": phoneNumber,
-        "zipCode": zipCode,
-        "propertyType": propertyType,
-        "creditScore": creditScore,
-        "purchaseYear": purchaseYear,
-        "estimatedPropertyValue": estimatedPropertyValue,
-        "remainingMoratgeBalance": remainingMoratgeBalance,
-        "curentMortageInterestRate": curentMortageInterestRate,
-        "secondMoratage": secondMoratage,
-        "propertyUsed": propertyUsed,
-        "borrowAdditionalCash": borrowAdditionalCash,
-        "yourEmployeeStatus": yourEmployeeStatus,
-        "qualifyingAnnualIncome": qualifyingAnnualIncome
-    }]
+    // var inputs = [{
+    //     "Phone": phoneNumber,
+    //     "zipCode": zipCode,
+    //     "propertyType": propertyType,
+    //     "creditScore": creditScore,
+    //     "purchaseYear": purchaseYear,
+    //     "estimatedPropertyValue": estimatedPropertyValue,
+    //     "remainingMoratgeBalance": remainingMoratgeBalance,
+    //     "curentMortageInterestRate": curentMortageInterestRate,
+    //     "secondMoratage": secondMoratage,
+    //     "propertyUsed": propertyUsed,
+    //     "borrowAdditionalCash": borrowAdditionalCash,
+    //     "yourEmployeeStatus": yourEmployeeStatus,
+    //     "qualifyingAnnualIncome": qualifyingAnnualIncome
+    // }]
 
-    var params = {
-        name: fullName,
-        email: email,
-        message: inputs
-    }
+    var message = "Phone :" + phoneNumber + "," + "zipCode :" + zipCode + "," + 
+    "propertyType: " + propertyType + "," + "creditScore :" + creditScore + "," +"purchaseYear:" + 
+    purchaseYear +","+ "estimatedPropertyValue:" + estimatedPropertyValue + ","+ "remainingMoratgeBalance:" +remainingMoratgeBalance
+    + "curentMortageInterestRate :" + curentMortageInterestRate + "," + "secondMoratage" + secondMoratage +"," + "propertyUsed:" + propertyUsed
+    + "borrowAdditionalCash:" + borrowAdditionalCash + ","+ "yourEmployeeStatus: " +yourEmployeeStatus + ","+ "qualifyingAnnualIncome:" + qualifyingAnnualIncome;
 
-    sendingMail(params);
-
+    createEmailParam(name,email,message);
 
 }
 
@@ -460,27 +454,27 @@ function checkpreApprovalLetterValidation() {
         onlyCharacters(additionalInformation);
     }
 
-    var inputs = [{
-        "Phone": phoneNumber,
-        "zipCode": zipCode,
-        "propertyType": propertyType,
-        "firstTimeHomebuyer": firstTimeHomebuyer,
-        "currentPropertyPurchaseSituation": currentPropertyPurchaseSituation,
-        "propertyBeUsed": propertyBeUsed,
-        "propertyValue": propertyValue,
-        "loanTerm": loanTerm,
-        "creditScore": creditScore,
-        "employementStatus": employementStatus,
-        "additionalInformation": additionalInformation
-    }]
+    // var inputs = [{
+    //     "Phone": phoneNumber,
+    //     "zipCode": zipCode,
+    //     "propertyType": propertyType,
+    //     "firstTimeHomebuyer": firstTimeHomebuyer,
+    //     "currentPropertyPurchaseSituation": currentPropertyPurchaseSituation,
+    //     "propertyBeUsed": propertyBeUsed,
+    //     "propertyValue": propertyValue,
+    //     "loanTerm": loanTerm,
+    //     "creditScore": creditScore,
+    //     "employementStatus": employementStatus,
+    //     "additionalInformation": additionalInformation
+    // }]
 
-    var params = {
-        name: fullName,
-        email: email,
-        message: inputs
-    }
+    var message = "Phone :" + phoneNumber + "," + "zipCode :" + zipCode + "," + 
+    "propertyType: " + propertyType + "," + "firstTimeHomebuyer :" + firstTimeHomebuyer + "," +"currentPropertyPurchaseSituation:" + 
+    currentPropertyPurchaseSituation +","+ "propertyBeUsed:" + propertyBeUsed + ","+ "propertyValue:" +propertyValue
+    + "loanTerm :" + loanTerm + "," + "creditScore" + creditScore +"," + "employementStatus:" + employementStatus
+    + "additionalInformation:" + additionalInformation ;
 
-    sendingMail(params);
+    createEmailParam(name,email,message);
 
 }
 
@@ -496,9 +490,7 @@ function totalAmountCalc() {
     var hoa = document.getElementById('hoaDues').value;
 
 
-    var total;
-
-    var monthlyIR = interestRate / 12;
+    var monthlyIR = interestRate / 1200;
 
     var monthlyval = loanTerm * 12;
 
@@ -506,16 +498,25 @@ function totalAmountCalc() {
 
     var mptax = ptax / 12;
 
-    var a = (1 + monthlyIR) ^ monthlyval;
+    var a = (1 + monthlyIR);
 
-    var b = a - 1;
+    var pow = Math.pow(a,monthlyval);
 
-    var totalMonthlyValue = loanAmount / b / [monthlyIR * a] + mhoi + mptax + hoa;
+    var b = pow - 1;
 
-    document.getElementById('totalMonthlyPay').innerHTML = '';
-    document.getElementById('totalMonthlyPay').innerHTML = totalMonthlyValue;
+    // var totalMonthlyValue = loanAmount / pow / [monthlyIR * b] + mhoi + mptax + hoa;
+    var totalMonthlyValue = (loanAmount * (monthlyIR * pow) / b) + mhoi + mptax + hoa;
 
-    var PrinAndInt = loanAmount / b / [monthlyIR * a];
+    if(totalMonthlyValue == NaN){
+        document.getElementById('totalMonthlyPay').innerHTML = 'Please enter valid inputs';
+        $('#totalMonthlyPay').css('color','red');
+    }else{
+        document.getElementById('totalMonthlyPay').innerHTML = '';
+        document.getElementById('totalMonthlyPay').innerHTML = "$" + totalMonthlyValue;
+        $('.cs-chart-percent').text("$" + totalMonthlyValue);
+    }
+
+    var PrinAndInt = (loanAmount * (monthlyIR * pow) / b);
 
     var homeInsurance = mhoi;
 
@@ -530,17 +531,15 @@ function totalAmountCalc() {
     document.getElementById('hoaFees').innerHTML = "$" + hoa;
 
 
-    document.getElementById('loanAmount').value = '';
-    document.getElementById('interestRate').value = '';
-    document.getElementById('loanTerm').value = '30';
-    document.getElementById('homeInsurance').value = '';
-    document.getElementById('propertyTaxes').value = '';
-    document.getElementById('hoaDues').value = '';
-    document.getElementById('propertyPurchasePrice').value = '';
-    document.getElementById('downPayment').value = '';
-    // document.getElementById('').value = '';
-    // document.getElementById('').value = '';
-    document.getElementById('pmiMonth').value = '';
+    // document.getElementById('loanAmount').value = '';
+    // document.getElementById('interestRate').value = '';
+    // document.getElementById('loanTerm').value = '30';
+    // document.getElementById('homeInsurance').value = '';
+    // document.getElementById('propertyTaxes').value = '';
+    // document.getElementById('hoaDues').value = '';
+    // document.getElementById('propertyPurchasePrice').value = '';
+    // document.getElementById('downPayment').value = '';
+    // document.getElementById('pmiMonth').value = '';
 
 }
 
