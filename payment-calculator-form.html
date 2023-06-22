@@ -130,7 +130,7 @@
                     <h1 class="display-4 text-white animated zoomIn">Monthly Payment Calculator</h1>
                     <a href="index.html" class="h5 text-white">Home</a>
                     <i class="far fa-circle text-white px-2"></i>
-                    <a href="payment-calculator.html" class="h5 text-white">Payment Calculator</a>
+                    <a href="payment-calculator-form.html" class="h5 text-white">Payment Calculator</a>
                 </div>
             </div>
         </div>
@@ -301,9 +301,9 @@
                                                                     <div class="skill-item center-block">
                                                                         <div class="cs-chart-succes"
                                                                             style="position: relative;display: inline-block;float: left;" id="dataPer"
-                                                                            data-percent="92">
+                                                                            data-percent="50">
                                                                             <span class="cs-chart-percent"
-                                                                                style="position: absolute;right: 141px;top: 135px;"></span>
+                                                                                style="position: absolute;top: 48%;left: 50%;transform: translate(-50%, -48%);font-size: 24px;font-weight: bold;"></span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -311,6 +311,7 @@
                                                             <div class="col-sm-6">
                                                                 <p class="no-border">How is my Monthly Payment
                                                                     Calculated?</p>
+                                                                <br />
                                                                 <div class="pay-calc-percent-list row">
                                                                     <div style="display: flex;align-items:center;"
                                                                         class="col-md-6">
@@ -401,6 +402,8 @@
 
     <script>
         $(document).ready(function () {
+            $('.cs-chart-percent').text(0);
+            $('.cs-chart-succes').attr('data-percent','10');
             $('.cs-chart-succes').easyPieChart({
                 easing: 'easeOutBounce',
                 lineWidth: '15',
@@ -408,8 +411,8 @@
                 size: '120',
                 scaleLength: '0',
                 lineCap: 'square',
-                barColor: '#367ae0',
-                trackColor: '#f2f2f2',
+                barColor: '#1a1363',
+                trackColor: '#ea7826',
                 onStep: function (from, to, percent) {
                     $(this.el).find('.cs-chart-percent').text(Math.round(percent));
                 }
