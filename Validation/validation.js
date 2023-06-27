@@ -506,14 +506,51 @@ function totalAmountCalc() {
 
     // var totalMonthlyValue = loanAmount / pow / [monthlyIR * b] + mhoi + mptax + hoa;
     var totalMonthlyValue = (loanAmount * (monthlyIR * pow) / b) + mhoi + mptax + hoa;
+    var parts = totalMonthlyValue.split('.');
+    var beforeDot = parts[0];
+    var afterDot = totalMonthlyValue.slice(totalMonthlyValue.indexOf('.') + 1);
+    var percentageValue = afterDot.substring(0, 2);
 
     if(totalMonthlyValue == NaN){
         document.getElementById('totalMonthlyPay').innerHTML = 'Please enter valid inputs';
         $('#totalMonthlyPay').css('color','red');
     }else{
         document.getElementById('totalMonthlyPay').innerHTML = '';
-        document.getElementById('totalMonthlyPay').innerHTML = "$" + totalMonthlyValue;
-        $('.cs-chart-percent').text("$" + totalMonthlyValue);
+        document.getElementById('totalMonthlyPay').innerHTML = "$" + beforeDot + "."+percentageValue;
+        $('.cs-chart-percent').text("$" + beforeDot +"."+ percentageValue);
+
+        if(beforeDot > 300 && beforeDot <600){
+            $('.cs-chart-succes').data('easyPieChart').update(12);
+           // $('.cs-chart-succes').attr('data-percent','12');
+        }else if(beforeDot > 601 && beforeDot <1000){
+            $('.cs-chart-succes').data('easyPieChart').update(20);
+            //$('.cs-chart-succes').attr('data-percent','20');
+        }else if(beforeDot > 1000 && beforeDot< 9999){
+            $('.cs-chart-succes').data('easyPieChart').update(25);
+            //$('.cs-chart-succes').attr('data-percent','25');
+        }else if(beforeDot > 10000 && beforeDot < 99999){
+            $('.cs-chart-succes').data('easyPieChart').update(55);
+            //$('.cs-chart-succes').attr('data-percent','50');
+        }else if(beforeDot> 100000 ){
+            $('.cs-chart-succes').data('easyPieChart').update(75);
+            //$('.cs-chart-succes').attr('data-percent','75');
+        }
+       
+        $('.cs-chart-succes').easyPieChart({
+            easing: 'easeOutBounce',
+            lineWidth: '15',
+            trackWidth: '15',
+            size: '120',
+            scaleLength: '0',
+            lineCap: 'square',
+            barColor: '#367ae0',
+            trackColor: '#f2f2f2',
+            onStep: function (from, to, percent) {
+                $(this.el).find('.cs-chart-percent').text(Math.round(percent));
+                
+            }
+        });
+
     }
 
     var PrinAndInt = (loanAmount * (monthlyIR * pow) / b);
