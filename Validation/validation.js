@@ -520,19 +520,19 @@ function totalAmountCalc() {
         $('.cs-chart-percent').text("$" + beforeDot +"."+ percentageValue);
 
         if(beforeDot > 300 && beforeDot <600){
-            $('.cs-chart-succes').data('easyPieChart').update(12);
+            $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
            // $('.cs-chart-succes').attr('data-percent','12');
         }else if(beforeDot > 601 && beforeDot <1000){
-            $('.cs-chart-succes').data('easyPieChart').update(20);
+            $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
             //$('.cs-chart-succes').attr('data-percent','20');
         }else if(beforeDot > 1000 && beforeDot< 9999){
-            $('.cs-chart-succes').data('easyPieChart').update(25);
+            $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
             //$('.cs-chart-succes').attr('data-percent','25');
         }else if(beforeDot > 10000 && beforeDot < 99999){
-            $('.cs-chart-succes').data('easyPieChart').update(55);
+            $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
             //$('.cs-chart-succes').attr('data-percent','50');
         }else if(beforeDot> 100000 ){
-            $('.cs-chart-succes').data('easyPieChart').update(75);
+            $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
             //$('.cs-chart-succes').attr('data-percent','75');
         }
        
