@@ -506,50 +506,34 @@ function totalAmountCalc() {
 
     // var totalMonthlyValue = loanAmount / pow / [monthlyIR * b] + mhoi + mptax + hoa;
     var totalMonthlyValue = (loanAmount * (monthlyIR * pow) / b) + mhoi + mptax + hoa;
-    var parts = totalMonthlyValue.split('.');
-    var beforeDot = parts[0];
-    var afterDot = totalMonthlyValue.slice(totalMonthlyValue.indexOf('.') + 1);
-    var percentageValue = afterDot.substring(0, 2);
+    var totalMontlyValueSplit = splitValues(totalMonthlyValue);
 
     if(totalMonthlyValue == NaN){
         document.getElementById('totalMonthlyPay').innerHTML = 'Please enter valid inputs';
         $('#totalMonthlyPay').css('color','red');
     }else{
         document.getElementById('totalMonthlyPay').innerHTML = '';
-        document.getElementById('totalMonthlyPay').innerHTML = "$" + beforeDot + "."+percentageValue;
-        $('.cs-chart-percent').text("$" + beforeDot +"."+ percentageValue);
-
-        if(beforeDot > 300 && beforeDot <600){
-            $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
-           // $('.cs-chart-succes').attr('data-percent','12');
-        }else if(beforeDot > 601 && beforeDot <1000){
-            $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
-            //$('.cs-chart-succes').attr('data-percent','20');
-        }else if(beforeDot > 1000 && beforeDot< 9999){
-            $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
-            //$('.cs-chart-succes').attr('data-percent','25');
-        }else if(beforeDot > 10000 && beforeDot < 99999){
-            $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
-            //$('.cs-chart-succes').attr('data-percent','50');
-        }else if(beforeDot> 100000 ){
-            $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
-            //$('.cs-chart-succes').attr('data-percent','75');
-        }
+        document.getElementById('totalMonthlyPay').innerHTML = totalMontlyValueSplit;
        
-        $('.cs-chart-succes').easyPieChart({
-            easing: 'easeOutBounce',
-            lineWidth: '15',
-            trackWidth: '15',
-            size: '120',
-            scaleLength: '0',
-            lineCap: 'square',
-            barColor: '#367ae0',
-            trackColor: '#f2f2f2',
-            onStep: function (from, to, percent) {
-                $(this.el).find('.cs-chart-percent').text(Math.round(percent));
-                
-            }
-        });
+
+        // if(beforeDot > 300 && beforeDot <600){
+        //     $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
+        //    // $('.cs-chart-succes').attr('data-percent','12');
+        // }else if(beforeDot > 601 && beforeDot <1000){
+        //     $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
+        //     //$('.cs-chart-succes').attr('data-percent','20');
+        // }else if(beforeDot > 1000 && beforeDot< 9999){
+        //     $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
+        //     //$('.cs-chart-succes').attr('data-percent','25');
+        // }else if(beforeDot > 10000 && beforeDot < 99999){
+        //     $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
+        //     //$('.cs-chart-succes').attr('data-percent','50');
+        // }else if(beforeDot> 100000 ){
+        //     $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
+        //     //$('.cs-chart-succes').attr('data-percent','75');
+        // }
+       
+        
 
     }
 
@@ -562,10 +546,23 @@ function totalAmountCalc() {
     document.getElementById('propTax').innerHTML = '';
     document.getElementById('hoaFees').innerHTML = '';
 
-    document.getElementById('prinAndIn').innerHTML = "$" + PrinAndInt;
-    document.getElementById('homeIns').innerHTML = "$" + homeInsurance;
-    document.getElementById('propTax').innerHTML = "$" + mptax;
-    document.getElementById('hoaFees').innerHTML = "$" + hoa;
+    var PrinAndIntSplit = splitValues(PrinAndInt);
+    var homeInsuranceSplit = splitValues(homeInsurance);
+    var mptaxSplit = splitValues(mptax);
+    var hoaSplit = splitValues(hoa);
+
+    document.getElementById('prinAndIn').innerHTML = PrinAndIntSplit;
+    document.getElementById('homeIns').innerHTML = homeInsuranceSplit;
+    document.getElementById('propTax').innerHTML = mptaxSplit;
+    document.getElementById('hoaFees').innerHTML = hoaSplit;
+
+
+    myChart.data.datasets[0].data[1] = (beforeDot +"."+ percentageValue);
+    myChart.data.datasets[0].data[2] = (beforeDot +"."+ percentageValue);
+    myChart.data.datasets[0].data[3] = (beforeDot +"."+ percentageValue);
+    myChart.data.datasets[0].data[4] = (beforeDot +"."+ percentageValue);
+    myChart.data.datasets[0].data[5] = (beforeDot +"."+ percentageValue);
+    myChart.update();
 
 
     // document.getElementById('loanAmount').value = '';
@@ -624,4 +621,17 @@ function checkMandatoryField(){
     }
 
     
+}
+
+function splitValues(value){
+
+    var parts = value.split('.');
+    var beforeDot = parts[0];
+    var afterDot = value.slice(value.indexOf('.') + 1);
+    var percentageValue = afterDot.substring(0, 2);
+
+    var amount = "$" + beforeDot + "."+ percentageValue;
+
+    return amount;
+
 }

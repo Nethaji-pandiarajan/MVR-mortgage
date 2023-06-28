@@ -669,8 +669,8 @@ path {
   border: none !important;
 }
 canvas {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
 }
 .column.is-3-widescreen {
   width: 33%;
