@@ -298,18 +298,19 @@
                                                         <div class="container row">
                                                             <div class="col-sm-4 chart-center">
                                                                 <div class="chart-center mt-4">
-                                                                    <div class="skill-item center-block">
+                                                                    <!-- <div class="skill-item center-block">
                                                                         <div class="cs-chart-succes"
                                                                             style="position: relative;display: inline-block;float: left;" id="dataPer"
                                                                             data-percent="50">
                                                                             <span class="cs-chart-percent"
                                                                                 style="position: absolute;top: 48%;left: 50%;transform: translate(-50%, -48%);font-size: 24px;font-weight: bold;"></span>
                                                                         </div>
-                                                                    </div>
+                                                                    </div> -->
+                                                                    <canvas id="doughnutChart" height="400px" width="400px"></canvas>
                                                                 </div>
                                                             </div>
                                                             <div class="col-sm-6">
-                                                                <p class="no-border">How is my Monthly Payment
+                                                                <p class="no-border mb-6">How is my Monthly Payment
                                                                     Calculated?</p>
                                                                 <br />
                                                                 <div class="pay-calc-percent-list row">
@@ -393,14 +394,15 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="js/piechart.js"></script>
+    <!-- <script src="js/piechart.js"></script> -->
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/jquery.appear.min.js"></script>
-    <script src="js/jquery.easypiechart.min.js"></script>
+    <!-- <script src="js/jquery.easypiechart.min.js"></script> -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="Validation/validation.js"></script>
 
-    <script>
+
+    <!-- <script>
         $(document).ready(function () {
             $('.cs-chart-percent').text(0);
             $('.cs-chart-succes').attr('data-percent','10');
@@ -421,7 +423,7 @@
 
             
         });
-    </script>
+    </script> -->
 
 
     <!-- <script>
@@ -517,6 +519,27 @@
 
 
 
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Get the canvas element
+var ctx = document.getElementById('doughnutChart').getContext('2d');
+
+// Create the doughnut chart
+var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Principal & interest', 'Homeowners insurance', 'Property tax' , 'HOA fees' , 'Total Monthly Payment'], // Add your labels here
+        datasets: [{
+            data: [25, 40, 35 ,65 , 70], // Add your data values here
+            backgroundColor: ['#1a1363', '#34ad54', '#bff9ff' ,'#091e3e' ,'#ea7826'], // Add your colors here
+            borderWidth: 1
+        }]
+    },
+    options: {
+        // Add any additional configuration options here
+    }
+});
     </script>
 </body>
 
