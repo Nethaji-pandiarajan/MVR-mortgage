@@ -497,6 +497,13 @@ function totalAmountCalc() {
     var mhoi = hoi / 12;
 
     var mptax = ptax / 12;
+    var numbermptax = mptax;
+    var numberStringmptax = numbermptax.toString(); // Convert number to string
+    var splitCodemptax = numberStringmptax.split('.'); // Split the string at the decimal point
+    var wholePartmptax = splitCodemptax[0];
+    console.log(splitCodemptax[1]);
+    var decimalPartmptax = splitCodemptax[1].slice(0,2);
+    var Totmptax = wholePartmptax+"."+decimalPartmptax
 
     var a = (1 + monthlyIR);
 
@@ -513,9 +520,12 @@ function totalAmountCalc() {
         $('#totalMonthlyPay').css('color','red');
     }else{
         document.getElementById('totalMonthlyPay').innerHTML = '';
-        document.getElementById('totalMonthlyPay').innerHTML = totalMontlyValueSplit;
-       
-
+        document.getElementById('totalMonthlyPay').innerHTML = "$" + totalMontlyValueSplit;
+        var str = totalMontlyValueSplit;
+        var substr = str.split('.');
+        var percentageValue = substr[1].slice(0,3);
+        
+       // myChart.update();
         // if(beforeDot > 300 && beforeDot <600){
         //     $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
         //    // $('.cs-chart-succes').attr('data-percent','12');
@@ -538,33 +548,45 @@ function totalAmountCalc() {
     }
 
     var PrinAndInt = (loanAmount * (monthlyIR * pow) / b);
-
+    var numberPrinAndInt = PrinAndInt;
+    var numberStringPrinAndInt = numberPrinAndInt.toString(); // Convert number to string
+    var splitCodePrinAndInt = numberStringPrinAndInt.split('.'); // Split the string at the decimal point
+    var wholePartPrinAndInt = splitCodePrinAndInt[0];
+    console.log(splitCodePrinAndInt[1]);
+    var decimalPartPrinAndInt = splitCodePrinAndInt[1].slice(0,2);
+    var TotPrinAndInt = wholePartPrinAndInt+"."+decimalPartPrinAndInt
+	
+	
     var homeInsurance = mhoi;
+    var numberhomeInsurance = homeInsurance;
+    var numberStringhomeInsurance = numberhomeInsurance.toString(); // Convert number to string
+    var splitCodehomeInsurance = numberStringhomeInsurance.split('.'); // Split the string at the decimal point
+    var wholeParthomeInsurance = splitCodehomeInsurance[0];
+    console.log(splitCodehomeInsurance[1]);
+    var decimalParthomeInsurance = splitCodehomeInsurance[1].slice(0,2);
+    var TothomeInsurance = wholeParthomeInsurance+"."+decimalParthomeInsurance
 
     document.getElementById('prinAndIn').innerHTML = '';
     document.getElementById('homeIns').innerHTML = '';
     document.getElementById('propTax').innerHTML = '';
     document.getElementById('hoaFees').innerHTML = '';
 
-    var PrinAndIntSplit = splitValues(PrinAndInt);
-    var homeInsuranceSplit = splitValues(homeInsurance);
-    var mptaxSplit = splitValues(mptax);
-    var hoaSplit = splitValues(hoa);
+    // var PrinAndIntSplit = splitValues(PrinAndInt);
+    // var homeInsuranceSplit = splitValues(homeInsurance);
+    // var mptaxSplit = splitValues(mptax);
+    // var hoaSplit = splitValues(hoa);
 
-    document.getElementById('prinAndIn').innerHTML = PrinAndIntSplit;
-    document.getElementById('homeIns').innerHTML = homeInsuranceSplit;
-    document.getElementById('propTax').innerHTML = mptaxSplit;
-    document.getElementById('hoaFees').innerHTML = hoaSplit;
+    document.getElementById('prinAndIn').innerHTML = "$" + TotPrinAndInt;
+    document.getElementById('homeIns').innerHTML = "$" + TothomeInsurance;
+    document.getElementById('propTax').innerHTML = "$" + Totmptax;
+    document.getElementById('hoaFees').innerHTML = "$" + hoa;
 
-
-    myChart.data.datasets[0].data[1] = (beforeDot +"."+ percentageValue);
-    myChart.data.datasets[0].data[2] = (beforeDot +"."+ percentageValue);
-    myChart.data.datasets[0].data[3] = (beforeDot +"."+ percentageValue);
-    myChart.data.datasets[0].data[4] = (beforeDot +"."+ percentageValue);
-    myChart.data.datasets[0].data[5] = (beforeDot +"."+ percentageValue);
-    myChart.update();
-
-
+	myChart.data.datasets[0].data[4] = (totalMontlyValueSplit);
+	myChart.data.datasets[0].data[0] = (TotPrinAndInt);
+	myChart.data.datasets[0].data[1] = (TothomeInsurance);
+	myChart.data.datasets[0].data[2] = (Totmptax);
+	myChart.data.datasets[0].data[3] = (hoa);
+	myChart.update();
     // document.getElementById('loanAmount').value = '';
     // document.getElementById('interestRate').value = '';
     // document.getElementById('loanTerm').value = '30';
@@ -630,7 +652,7 @@ function splitValues(value){
     var afterDot = value.slice(value.indexOf('.') + 1);
     var percentageValue = afterDot.substring(0, 2);
 
-    var amount = "$" + beforeDot + "."+ percentageValue;
+    var amount = beforeDot + "."+ percentageValue;
 
     return amount;
 

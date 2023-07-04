@@ -24,12 +24,12 @@
 }
 /*** Spinner ***/
 .spinner {
-  width: 40px;
+  /* width: 40px;
   height: 40px;
-  background: var(--primary);
+  background: var(--primary); */
   margin: 100px auto;
-  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
-  animation: sk-rotateplane 1.2s infinite ease-in-out;
+  /* -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out; */
 }
 form {
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.52);
@@ -817,4 +817,7 @@ canvas {
 }
 .today-rate-head-clr{
   color: var(--orange) !important;
+}
+.spinner-border {
+  color: var(--primary) !important;
 }
