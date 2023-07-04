@@ -521,6 +521,7 @@ function totalAmountCalc() {
     }else{
         document.getElementById('totalMonthlyPay').innerHTML = '';
         document.getElementById('totalMonthlyPay').innerHTML = "$" + totalMontlyValueSplit;
+        document.getElementById('totalMonthlyPay1').innerHTML = "$" + totalMontlyValueSplit;
         var str = totalMontlyValueSplit;
         var substr = str.split('.');
         var percentageValue = substr[1].slice(0,3);

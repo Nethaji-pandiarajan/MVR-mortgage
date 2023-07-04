@@ -65,7 +65,7 @@ form {
 #spinner {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  transition: opacity 2s ease-out, visibility 0s linear 1.5s;
   z-index: 99999;
 }
 
@@ -794,11 +794,35 @@ canvas {
 .no-border {
   border: none !important;
 }
-.blue-clr-box {
+.darkblue-clr-box {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-color: var(--primary);
+  background-color: #1a1363;
+}
+.green-clr-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #34ad54;
+}
+.skyblue-clr-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #bff9ff;
+}
+.cornblue-clr-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #6495ED;
+}
+.orange-clr-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #ea7826;
 }
 .add-textbox {
   display: flex;align-items:center;justify-content: end;
