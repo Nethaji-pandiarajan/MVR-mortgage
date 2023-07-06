@@ -502,9 +502,13 @@ function totalAmountCalc() {
     var splitCodemptax = numberStringmptax.split('.'); // Split the string at the decimal point
     var wholePartmptax = splitCodemptax[0];
     console.log(splitCodemptax[1]);
-    var decimalPartmptax = splitCodemptax[1].slice(0,2);
-    var Totmptax = wholePartmptax+"."+decimalPartmptax
-
+    if(splitCodemptax[1]){
+        var decimalPartmptax = splitCodemptax[1].slice(0,2);
+        var Totmptax = wholePartmptax+"."+decimalPartmptax
+    }else{
+        var Totmptax = wholePartmptax +".00"
+    }
+   
     var a = (1 + monthlyIR);
 
     var pow = Math.pow(a,monthlyval);
@@ -526,26 +530,6 @@ function totalAmountCalc() {
         var substr = str.split('.');
         var percentageValue = substr[1].slice(0,3);
         
-       // myChart.update();
-        // if(beforeDot > 300 && beforeDot <600){
-        //     $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
-        //    // $('.cs-chart-succes').attr('data-percent','12');
-        // }else if(beforeDot > 601 && beforeDot <1000){
-        //     $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
-        //     //$('.cs-chart-succes').attr('data-percent','20');
-        // }else if(beforeDot > 1000 && beforeDot< 9999){
-        //     $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
-        //     //$('.cs-chart-succes').attr('data-percent','25');
-        // }else if(beforeDot > 10000 && beforeDot < 99999){
-        //     $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
-        //     //$('.cs-chart-succes').attr('data-percent','50');
-        // }else if(beforeDot> 100000 ){
-        //     $('.cs-chart-succes').data('easyPieChart').update("$" + beforeDot +"."+ percentageValue);
-        //     //$('.cs-chart-succes').attr('data-percent','75');
-        // }
-       
-        
-
     }
 
     var PrinAndInt = (loanAmount * (monthlyIR * pow) / b);
@@ -572,17 +556,12 @@ function totalAmountCalc() {
     document.getElementById('propTax').innerHTML = '';
     document.getElementById('hoaFees').innerHTML = '';
 
-    // var PrinAndIntSplit = splitValues(PrinAndInt);
-    // var homeInsuranceSplit = splitValues(homeInsurance);
-    // var mptaxSplit = splitValues(mptax);
-    // var hoaSplit = splitValues(hoa);
-
     document.getElementById('prinAndIn').innerHTML = "$" + TotPrinAndInt;
     document.getElementById('homeIns').innerHTML = "$" + TothomeInsurance;
     document.getElementById('propTax').innerHTML = "$" + Totmptax;
     document.getElementById('hoaFees').innerHTML = "$" + hoa;
 
-	myChart.data.datasets[0].data[4] = (totalMontlyValueSplit);
+	//myChart.data.datasets[0].data[4] = (totalMontlyValueSplit);
 	myChart.data.datasets[0].data[0] = (TotPrinAndInt);
 	myChart.data.datasets[0].data[1] = (TothomeInsurance);
 	myChart.data.datasets[0].data[2] = (Totmptax);

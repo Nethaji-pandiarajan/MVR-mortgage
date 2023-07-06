@@ -672,6 +672,18 @@ canvas {
   width: 400px;
   height: 400px;
 }
+@media (max-width: 667.98px) {
+  canvas {
+    width: 300px !important;
+    height: 300px !important;
+  } 
+}
+@media (min-width: 667.98px) {
+  canvas {
+    width: 400px !important;
+    height: 400px !important;
+  } 
+}
 .column.is-3-widescreen {
   width: 33%;
 }
