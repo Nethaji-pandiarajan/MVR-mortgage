@@ -1,0 +1,70 @@
+{
+    "primary": [
+        {
+            "thirtyYear": {
+                "rate": "7.999%",
+                "points": "1.000%",
+                "apr": "6.002%"
+            },
+            "twentyYear": {
+                "rate": "5.999%",
+                "points": "0.000%",
+                "apr": "7.002%"
+            },
+            "fifteenYear": {
+                "rate": "5.999%",
+                "points": "0.000%",
+                "apr": "5.002%"
+            },
+            "tenYear": {
+                "rate": "5.999%",
+                "points": "0.000%",
+                "apr": "6.002%"
+            },
+            "sevenYear": {
+                "rate": "5.999%",
+                "points": "0.000%",
+                "apr": "6.002%"
+            },
+            "fiveYear": {
+                "rate": "5.999%",
+                "points": "0.000%",
+                "apr": "6.002%"
+            }
+        }
+    ],
+    "investment": [
+        {
+            "thirtyYear": {
+                "rate": "5.999%",
+                "points": "0.000%",
+                "apr": "6.002%"
+            },
+            "twentyYear": {
+                "rate": "5.999%",
+                "points": "0.000%",
+                "apr": "6.002%"
+            },
+            "fifteenYear": {
+                "rate": "5.999%",
+                "points": "0.000%",
+                "apr": "6.002%"
+            },
+            "tenYear": {
+                "rate": "5.999%",
+                "points": "0.000%",
+                "apr": "6.002%"
+            },
+            "sevenYear": {
+                "rate": "5.999%",
+                "points": "0.000%",
+                "apr": "6.002%"
+            },
+            "fiveYear": {
+                "rate": "5.999%",
+                "points": "0.000%",
+                "apr": "6.002%"
+            }
+        }
+    ]
+}
