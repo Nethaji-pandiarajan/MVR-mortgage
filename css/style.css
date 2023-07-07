@@ -676,7 +676,34 @@ canvas {
   canvas {
     width: 300px !important;
     height: 300px !important;
-  } 
+  }
+  .f-13 , .no-bor-con-mob ,.mob-lab-name{
+    font-size: 13px;
+  }
+  .con-mob , .col-xl-6-mob {
+    padding: 0px;
+  }
+  .s-team-mob {
+    padding: 12px;
+  }
+}
+@media (max-width: 320.98px) {
+  .f-13 , .no-bor-con-mob ,.mob-lab-name{
+    font-size: 10px;
+  }
+  .con-mob , .col-xl-6-mob {
+    padding: 0px;
+  }
+  .s-team-mob {
+    padding: 12px;
+  }
+  .form-control {
+    padding: 0 0 0 20px ;
+  }
+  canvas {
+    width: 250px !important;
+    height: 250px !important;
+}
 }
 @media (min-width: 667.98px) {
   canvas {
@@ -856,4 +883,7 @@ canvas {
 }
 .spinner-border {
   color: var(--primary) !important;
+}
+.form-lab-iconpos{
+  position: absolute;top: 40px;left: 20px;
 }
