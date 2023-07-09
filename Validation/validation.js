@@ -489,6 +489,8 @@ function totalAmountCalc() {
     var ptax = document.getElementById('propertyTaxes').value;
     var hoa = document.getElementById('hoaDues').value;
 
+    hoa = hoa * 1;
+
 
     var monthlyIR = interestRate / 1200;
 
@@ -626,7 +628,7 @@ function checkMandatoryField(){
 }
 
 function splitValues(value){
-
+    value = value.toString();
     var parts = value.split('.');
     var beforeDot = parts[0];
     var afterDot = value.slice(value.indexOf('.') + 1);
