@@ -540,8 +540,13 @@ function totalAmountCalc() {
     var splitCodePrinAndInt = numberStringPrinAndInt.split('.'); // Split the string at the decimal point
     var wholePartPrinAndInt = splitCodePrinAndInt[0];
     console.log(splitCodePrinAndInt[1]);
-    var decimalPartPrinAndInt = splitCodePrinAndInt[1].slice(0,2);
-    var TotPrinAndInt = wholePartPrinAndInt+"."+decimalPartPrinAndInt
+    if(splitCodePrinAndInt[1]){
+        var decimalPartPrinAndInt = splitCodePrinAndInt[1].slice(0,2);
+        var TotPrinAndInt = wholePartPrinAndInt+"."+decimalPartPrinAndInt
+    }else{
+        var TotPrinAndInt = wholePartmptax +".00"
+    }
+   
 	
 	
     var homeInsurance = mhoi;
@@ -550,8 +555,12 @@ function totalAmountCalc() {
     var splitCodehomeInsurance = numberStringhomeInsurance.split('.'); // Split the string at the decimal point
     var wholeParthomeInsurance = splitCodehomeInsurance[0];
     console.log(splitCodehomeInsurance[1]);
-    var decimalParthomeInsurance = splitCodehomeInsurance[1].slice(0,2);
-    var TothomeInsurance = wholeParthomeInsurance+"."+decimalParthomeInsurance
+    if(splitCodehomeInsurance[1]){
+        var decimalParthomeInsurance = splitCodehomeInsurance[1].slice(0,2);
+        var TothomeInsurance = wholeParthomeInsurance+"."+decimalParthomeInsurance
+    }else{
+        var TothomeInsurance = wholePartmptax +".00"
+    }
 
     document.getElementById('prinAndIn').innerHTML = '';
     document.getElementById('homeIns').innerHTML = '';
