@@ -559,7 +559,7 @@ function totalAmountCalc() {
         var decimalParthomeInsurance = splitCodehomeInsurance[1].slice(0,2);
         var TothomeInsurance = wholeParthomeInsurance+"."+decimalParthomeInsurance
     }else{
-        var TothomeInsurance = wholePartmptax +".00"
+        var TothomeInsurance = wholeParthomeInsurance +".00"
     }
 
     document.getElementById('prinAndIn').innerHTML = '';
