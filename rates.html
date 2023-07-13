@@ -45,6 +45,63 @@
         $(document).ready(function () {
             $("#header").load("header.html");
             $("#footer").load("footer.html");
+
+            $.ajax({
+                type: "GET",
+                url: "validation/primary.php",
+                dataType: "json",
+                success: function (response) {
+
+                    $('#thirtyYrRateP').val(response.thirtyYrRate);
+                    $('#thirtyYrPointsP').val(response.thirtyYrPoints);
+                    $('#thirtyYrAPRP').val(response.thirtyYrAPR);
+                    $('#twentyYrRateP').val(response.twentyYrRate);
+                    $('#twentyYrPointsP').val(response.twentyYrPoints);
+                    $('#twentyYrAPRP').val(response.twentyYrAPR);
+                    $('#fifteenYrRateP').val(response.fifteenYrRate);
+                    $('#fifteenYrPointsP').val(response.fifteenYrPoints)
+                    $('#fifteenYrAPRP').val(response.fifteenYrAPR)
+                    $('#tenYrRateP').val(response.tenYrRate);
+                    $('#tenYrPointsP').val(response.fifteenYrPoints);
+                    $('#tenYrAPRP').val(response.fifteenYrAPR);
+                    $('#sevenYrRateP').val(response.sevenYrRate);
+                    $('#sevenYrPointsP').val(response.sevenYrPoints);
+                    $('#sevenYrAPRP').val(response.sevenYrAPR)
+                    $('#fiveYrRateP').val(response.fiveYrRate)
+                    $('#fiveYrPointsP').val(response.fiveYrPoints);
+                    $('#fiveYrAPRP').val(response.fiveYrAPR);
+
+                }
+            });
+
+            $.ajax({
+                type: "GET",
+                url: "validation/invest.php",
+                dataType: "json",
+                success: function (response) {
+
+                    $('#thirtyYrRateI').val(response.thirtyYrRate);
+                    $('#thirtyYrPointsI').val(response.thirtyYrPoints);
+                    $('#thirtyYrAPRI').val(response.thirtyYrAPR);
+                    $('#twentyYrRateI').val(response.twentyYrRate);
+                    $('#twentyYrPointsI').val(response.twentyYrPoints);
+                    $('#twentyYrAPRI').val(response.twentyYrAPR);
+                    $('#fifteenYrRateI').val(response.fifteenYrRate);
+                    $('#fifteenYrPointsI').val(response.fifteenYrPoints)
+                    $('#fifteenYrAPRI').val(response.fifteenYrAPR)
+                    $('#tenYrRateI').val(response.tenYrRate);
+                    $('#tenYrPointsI').val(response.fifteenYrPoints);
+                    $('#tenYrAPRI').val(response.fifteenYrAPR);
+                    $('#sevenYrRateI').val(response.sevenYrRate);
+                    $('#sevenYrPointsI').val(response.sevenYrPoints);
+                    $('#sevenYrAPRI').val(response.sevenYrAPR)
+                    $('#fiveYrRateI').val(response.fiveYrRate)
+                    $('#fiveYrPointsI').val(response.fiveYrPoints);
+                    $('#fiveYrAPRI').val(response.fiveYrAPR);
+
+                }
+            });
+
         });
 
 
@@ -61,7 +118,8 @@
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner">
-            <img class="micro-logo" src="https://mvrmortgage.com/clients/11469/uploads/2021/04/43884.png" alt="MVR Mortgage Company" title="MVR Mortgage Company" style="height:69px;width:104px">
+            <img class="micro-logo" src="https://mvrmortgage.com/clients/11469/uploads/2021/04/43884.png"
+                alt="MVR Mortgage Company" title="MVR Mortgage Company" style="height:69px;width:104px">
         </div>
     </div>
     <!-- Spinner End -->
@@ -149,191 +207,205 @@
                             <div class="content">
                                 <h1>Primary Home</h1>
                             </div>
-    
-                            <div class="columns">
-                                <div class="column is-three-quarters w-100">
-                                    <div class="card">
-                                        <div class="card-content">
-    
-                                            <div class="w-100">
-                                                <!-- <p class="mb-3">Primary Home</p> -->
-                                                <p class="mb-3">30 Yr Fixed Conventional</p>
-    
-                                                <div class="form-group row">
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>Rate
-                                                        </label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrRateP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
-                                                    </div>
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>Points</label>
-                                                        <input type="text" class="form-control inpCorr"
-                                                            id="thirtyYrPointsP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
-                                                    </div>
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>APR</label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrAPRP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <!-- <p class="mb-3">Primary Home</p> -->
-                                                <p class="mb-3">20 Yr Fixed Conventional</p>
-    
-                                                <div class="form-group row">
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>Rate
-                                                        </label>
-                                                        <input type="text" class="form-control inpCorr" id="twentyYrRateP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
-                                                    </div>
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>Points</label>
-                                                        <input type="text" class="form-control inpCorr"
-                                                            id="twentyYrPointsP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
-                                                    </div>
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>APR</label>
-                                                        <input type="text" class="form-control inpCorr" id="twentyYrAPRP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
+                            <form method="post">
+                                <div class="columns">
+                                    <div class="column is-three-quarters w-100">
+                                        <div class="card">
+                                            <div class="card-content">
+
+                                                <div class="w-100">
+                                                    <!-- <p class="mb-3">Primary Home</p> -->
+                                                    <p class="mb-3">30 Yr Fixed Conventional</p>
+
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>Rate
+                                                            </label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="thirtyYrRateP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>Points</label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="thirtyYrPointsP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>APR</label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="thirtyYrAPRP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
+
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <!-- <p class="mb-3">Primary Home</p> -->
-                                                <p class="mb-3">15 Yr Fixed Conventional</p>
-    
-                                                <div class="form-group row">
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>Rate
-                                                        </label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrRateP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
-                                                    </div>
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>Points</label>
-                                                        <input type="text" class="form-control inpCorr"
-                                                            id="thirtyYrPointsP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
-                                                    </div>
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>APR</label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrAPRP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
+                                                <div class="w-100">
+                                                    <!-- <p class="mb-3">Primary Home</p> -->
+                                                    <p class="mb-3">20 Yr Fixed Conventional</p>
+
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>Rate
+                                                            </label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="twentyYrRateP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>Points</label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="twentyYrPointsP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>APR</label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="twentyYrAPRP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <!-- <p class="mb-3">Primary Home</p> -->
-                                                <p class="mb-3">10 Yr Fixed Conventional</p>
-    
-                                                <div class="form-group row">
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>Rate
-                                                        </label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrRateP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
+                                                <div class="w-100">
+                                                    <!-- <p class="mb-3">Primary Home</p> -->
+                                                    <p class="mb-3">15 Yr Fixed Conventional</p>
+
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>Rate
+                                                            </label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="fifteenYrRateP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>Points</label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="fifteenYrPointsP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>APR</label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="fifteenYrAPRP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
                                                     </div>
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>Points</label>
-                                                        <input type="text" class="form-control inpCorr"
-                                                            id="thirtyYrPointsP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
+                                                </div>
+                                                <div class="w-100">
+                                                    <!-- <p class="mb-3">Primary Home</p> -->
+                                                    <p class="mb-3">10 Yr Fixed Conventional</p>
+
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>Rate
+                                                            </label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="tenYrRateP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>Points</label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="tenYrPointsP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>APR</label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="tenYrAPRP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
+
                                                     </div>
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>APR</label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrAPRP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
+                                                </div>
+                                                <div class="w-100">
+                                                    <!-- <p class="mb-3">Primary Home</p> -->
+                                                    <p class="mb-3">7 Yr Fixed Conventional</p>
+
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>Rate
+                                                            </label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="sevenYrRateP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>Points</label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="sevenYrPointsP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>APR</label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="sevenYrAPRP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
+
                                                     </div>
-                                                    
+                                                </div>
+                                                <div class="w-100">
+                                                    <!-- <p class="mb-3">Primary Home</p> -->
+                                                    <p class="mb-3">5 Yr Fixed Conventional</p>
+
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>Rate
+                                                            </label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="fiveYrRateP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>Points</label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="fiveYrPointsP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
+                                                        <div class="col-sm-4" style="position: relative;">
+                                                            <label>APR</label>
+                                                            <input type="text" class="form-control inpCorr"
+                                                                id="fiveYrAPRP">
+                                                            <span style="position: absolute;top: 40px;left: 20px;"><i
+                                                                    class="fa fa-percentage"></i></span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="text-center mt-4 mb-4"><button onclick="changeVal()"
+                                                        class="calcAmount btn btn-primary mb-2 mt-4 sub-bg col-sm-2">Save</button>
                                                 </div>
                                             </div>
-                                            <div class="w-100">
-                                                <!-- <p class="mb-3">Primary Home</p> -->
-                                                <p class="mb-3">7 Yr Fixed Conventional</p>
-    
-                                                <div class="form-group row">
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>Rate
-                                                        </label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrRateP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
-                                                    </div>
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>Points</label>
-                                                        <input type="text" class="form-control inpCorr"
-                                                            id="thirtyYrPointsP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
-                                                    </div>
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>APR</label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrAPRP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <!-- <p class="mb-3">Primary Home</p> -->
-                                                <p class="mb-3">5 Yr Fixed Conventional</p>
-    
-                                                <div class="form-group row">
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>Rate
-                                                        </label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrRateP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
-                                                    </div>
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>Points</label>
-                                                        <input type="text" class="form-control inpCorr"
-                                                            id="thirtyYrPointsP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
-                                                    </div>
-                                                    <div class="col-sm-4" style="position: relative;">
-                                                        <label>APR</label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrAPRP">
-                                                        <span style="position: absolute;top: 40px;left: 20px;"><i
-                                                                class="fa fa-percentage"></i></span>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="text-center mt-4 mb-4"><button onclick="changeVal()"
-                                                class="calcAmount btn btn-primary mb-2 mt-4 sub-bg col-sm-2">Save</button></div>
+
                                         </div>
-    
+
                                     </div>
-    
                                 </div>
-                            </div>
+                            </form>
                         </div>
                 </div>
             </div>
             </section>
-    
+
         </div>
     </div>
     <div class="container-fluid position-relative p-0">
@@ -345,194 +417,207 @@
                             <div class="content">
                                 <h1>Investment Property</h1>
                             </div>
-    
+
                             <div class="columns">
                                 <div class="column is-three-quarters w-100">
                                     <div class="card">
                                         <div class="card-content">
-    
+
                                             <div class="w-100">
                                                 <!-- <p class="mb-3">Primary Home</p> -->
                                                 <p class="mb-3">30 Yr Fixed Conventional</p>
-    
+
                                                 <div class="form-group row">
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>Rate
                                                         </label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrRateP">
+                                                        <input type="text" class="form-control inpCorr"
+                                                            id="thirtyYrRateI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>Points</label>
                                                         <input type="text" class="form-control inpCorr"
-                                                            id="thirtyYrPointsP">
+                                                            id="thirtyYrPointsI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>APR</label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrAPRP">
+                                                        <input type="text" class="form-control inpCorr"
+                                                            id="thirtyYrAPRI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="w-100">
                                                 <!-- <p class="mb-3">Primary Home</p> -->
                                                 <p class="mb-3">20 Yr Fixed Conventional</p>
-    
+
                                                 <div class="form-group row">
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>Rate
                                                         </label>
-                                                        <input type="text" class="form-control inpCorr" id="twentyYrRateP">
+                                                        <input type="text" class="form-control inpCorr"
+                                                            id="twentyYrRateI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>Points</label>
                                                         <input type="text" class="form-control inpCorr"
-                                                            id="twentyYrPointsP">
+                                                            id="twentyYrPointsI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>APR</label>
-                                                        <input type="text" class="form-control inpCorr" id="twentyYrAPRP">
+                                                        <input type="text" class="form-control inpCorr"
+                                                            id="twentyYrAPRI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="w-100">
                                                 <!-- <p class="mb-3">Primary Home</p> -->
                                                 <p class="mb-3">15 Yr Fixed Conventional</p>
-    
+
                                                 <div class="form-group row">
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>Rate
                                                         </label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrRateP">
+                                                        <input type="text" class="form-control inpCorr"
+                                                            id="fifteenYrRateI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>Points</label>
                                                         <input type="text" class="form-control inpCorr"
-                                                            id="thirtyYrPointsP">
+                                                            id="fifteenYrPointsI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>APR</label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrAPRP">
+                                                        <input type="text" class="form-control inpCorr"
+                                                            id="fifteenYrAPRI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="w-100">
                                                 <!-- <p class="mb-3">Primary Home</p> -->
                                                 <p class="mb-3">10 Yr Fixed Conventional</p>
-    
+
                                                 <div class="form-group row">
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>Rate
                                                         </label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrRateP">
+                                                        <input type="text" class="form-control inpCorr"
+                                                            id="tenYrRateI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>Points</label>
                                                         <input type="text" class="form-control inpCorr"
-                                                            id="thirtyYrPointsP">
+                                                            id="tenYrPointsI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>APR</label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrAPRP">
+                                                        <input type="text" class="form-control inpCorr"
+                                                            id="tenYrAPRI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="w-100">
                                                 <!-- <p class="mb-3">Primary Home</p> -->
                                                 <p class="mb-3">7 Yr Fixed Conventional</p>
-    
+
                                                 <div class="form-group row">
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>Rate
                                                         </label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrRateP">
+                                                        <input type="text" class="form-control inpCorr"
+                                                            id="sevenYrRateI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>Points</label>
                                                         <input type="text" class="form-control inpCorr"
-                                                            id="thirtyYrPointsP">
+                                                            id="sevenYrPointsI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>APR</label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrAPRP">
+                                                        <input type="text" class="form-control inpCorr"
+                                                            id="sevenYrAPRI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="w-100">
                                                 <!-- <p class="mb-3">Primary Home</p> -->
                                                 <p class="mb-3">5 Yr Fixed Conventional</p>
-    
+
                                                 <div class="form-group row">
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>Rate
                                                         </label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrRateP">
+                                                        <input type="text" class="form-control inpCorr"
+                                                            id="fiveYrRateI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>Points</label>
                                                         <input type="text" class="form-control inpCorr"
-                                                            id="thirtyYrPointsP">
+                                                            id="fiveYrPointsI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
                                                     <div class="col-sm-4" style="position: relative;">
                                                         <label>APR</label>
-                                                        <input type="text" class="form-control inpCorr" id="thirtyYrAPRP">
+                                                        <input type="text" class="form-control inpCorr"
+                                                            id="fiveYrAPRI">
                                                         <span style="position: absolute;top: 40px;left: 20px;"><i
                                                                 class="fa fa-percentage"></i></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="text-center mt-4 mb-4"><button onclick="changeVal()"
-                                                class="calcAmount btn btn-primary mb-2 mt-4 sub-bg col-sm-2">Save</button></div>
-    
+                                                    class="calcAmount btn btn-primary mb-2 mt-4 sub-bg col-sm-2">Save</button>
+                                            </div>
+
                                         </div>
-    
+
                                     </div>
-    
+
                                 </div>
                             </div>
                         </div>
                 </div>
             </div>
             </section>
-    
+
         </div>
     </div>
     </div>
@@ -569,12 +654,12 @@
 
     <script>
 
-        
+
 
     </script>
 
 
-    
+
 </body>
 
 </html>

@@ -38,6 +38,64 @@
         $(document).ready(function () {
             $("#header").load("header.html");
             $("#footer").load("footer.html");
+
+            $.ajax({
+                type: "GET",
+                url: "validation/primary.php",
+                dataType: "json",
+                success: function (response) {
+
+                    $('#thirtyYrRateP').text(response.thirtyYrRate);
+                    $('#thirtyYrPointsP').text(response.thirtyYrPoints);
+                    $('#thirtyYrAPRP').text(response.thirtyYrAPR);
+                    $('#twentyYrRateP').text(response.twentyYrRate);
+                    $('#twentyYrPointsP').text(response.twentyYrPoints);
+                    $('#twentyYrAPRP').text(response.twentyYrAPR);
+                    $('#fifteenYrRateP').text(response.fifteenYrRate);
+                    $('#fifteenYrPointsP').text(response.fifteenYrPoints)
+                    $('#fifteenYrAPRP').text(response.fifteenYrAPR)
+                    $('#tenYrRateP').text(response.tenYrRate);
+                    $('#tenYrPointsP').text(response.fifteenYrPoints);
+                    $('#tenYrAPRP').text(response.fifteenYrAPR);
+                    $('#sevenYrRateP').text(response.sevenYrRate);
+                    $('#sevenYrPointsP').text(response.sevenYrPoints);
+                    $('#sevenYrAPRP').text(response.sevenYrAPR)
+                    $('#fiveYrRateP').text(response.fiveYrRate)
+                    $('#fiveYrPointsP').text(response.fiveYrPoints);
+                    $('#fiveYrAPRP').text(response.fiveYrAPR);
+
+                }
+            });
+
+            $.ajax({
+                type: "GET",
+                url: "validation/invest.php",
+                dataType: "json",
+                success: function (response) {
+
+                    $('#thirtyYrRateI').text(response.thirtyYrRate);
+                    $('#thirtyYrPointsI').text(response.thirtyYrPoints);
+                    $('#thirtyYrAPRI').text(response.thirtyYrAPR);
+                    $('#twentyYrRateI').text(response.twentyYrRate);
+                    $('#twentyYrPointsI').text(response.twentyYrPoints);
+                    $('#twentyYrAPRI').text(response.twentyYrAPR);
+                    $('#fifteenYrRateI').text(response.fifteenYrRate);
+                    $('#fifteenYrPointsI').text(response.fifteenYrPoints)
+                    $('#fifteenYrAPRI').text(response.fifteenYrAPR)
+                    $('#tenYrRateI').text(response.tenYrRate);
+                    $('#tenYrPointsI').text(response.fifteenYrPoints);
+                    $('#tenYrAPRI').text(response.fifteenYrAPR);
+                    $('#sevenYrRateI').text(response.sevenYrRate);
+                    $('#sevenYrPointsI').text(response.sevenYrPoints);
+                    $('#sevenYrAPRI').text(response.sevenYrAPR)
+                    $('#fiveYrRateI').text(response.fiveYrRate)
+                    $('#fiveYrPointsI').text(response.fiveYrPoints);
+                    $('#fiveYrAPRI').text(response.fiveYrAPR);
+
+                }
+            });
+
+    
         });
     </script>
 </head>
@@ -138,9 +196,9 @@
                                 <td class="todayrate-table-td text-center">APR</td>
                             </tr>
                             <tr>
-                                <td class="pthirtyRate text-center">5.999%</td>
-                                <td class="pthirtyPoints text-center">0.000%</td>
-                                <td class="pthirtyApr text-center">6.002%</td>
+                                <td class="pthirtyRate text-center" id="thirtyYrRateP"></td>
+                                <td class="pthirtyPoints text-center" id="thirtyYrPointsP"></td>
+                                <td class="pthirtyApr text-center" id="thirtyYrAPRP"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -155,9 +213,9 @@
                                 <td class="todayrate-table-td text-center">APR</td>
                             </tr>
                             <tr>
-                                <td class="ptwentyRate text-center">5.999%</td>
-                                <td class="ptwentyPoints text-center">0.000%</td>
-                                <td class="ptwentyApr text-center">6.002%</td>
+                                <td class="ptwentyRate text-center" id="twentyYrRateP"></td>
+                                <td class="ptwentyPoints text-center" id="twentyYrPointsP"></td>
+                                <td class="ptwentyApr text-center" id="twentyYrAPRP"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -172,9 +230,9 @@
                                 <td class="todayrate-table-td text-center">APR</td>
                             </tr>
                             <tr>
-                                <td class="pfifteenRate text-center">5.999%</td>
-                                <td class="pfifteenPoints text-center">0.000%</td>
-                                <td class="pfifteenApr text-center">6.002%</td>
+                                <td class="pfifteenRate text-center" id="fifteenYrRateP"></td>
+                                <td class="pfifteenPoints text-center" id="fifteenYrPointsP"></td>
+                                <td class="pfifteenApr text-center" id="fifteenYrAPRP"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -189,9 +247,9 @@
                                 <td class="todayrate-table-td text-center">APR</td>
                             </tr>
                             <tr>
-                                <td class="pTenRate text-center">5.999%</td>
-                                <td class="pTenPoints text-center">0.000%</td>
-                                <td class="pTenApr text-center">6.002%</td>
+                                <td class="pTenRate text-center" id="tenYrRateP"></td>
+                                <td class="pTenPoints text-center" id="tenYrPointsP"></td>
+                                <td class="pTenApr text-center" id="tenYrAPRP"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -206,9 +264,9 @@
                                 <td class="todayrate-table-td text-center">APR</td>
                             </tr>
                             <tr>
-                                <td class="pSevenRate text-center">5.999%</td>
-                                <td class="pSevenPoints text-center">0.000%</td>
-                                <td class="pSevenApr text-center">6.002%</td>
+                                <td class="pSevenRate text-center" id="sevenYrRateP"></td>
+                                <td class="pSevenPoints text-center" id="sevenYrPointsP"></td>
+                                <td class="pSevenApr text-center" id="sevenYrAPRP"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -223,9 +281,9 @@
                                 <td class="todayrate-table-td text-center">APR</td>
                             </tr>
                             <tr>
-                                <td class="pFiveRate text-center">5.999%</td>
-                                <td class="pFivePoints text-center">0.000%</td>
-                                <td class="pFiveApr text-center">6.002%</td>
+                                <td class="pFiveRate text-center" id="fiveYrRateP"></td>
+                                <td class="pFivePoints text-center" id="fiveYrPointsP"></td>
+                                <td class="pFiveApr text-center" id="fiveYrAPRP"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -243,9 +301,9 @@
                                 <td class="todayrate-table-td text-center">APR</td>
                             </tr>
                             <tr>
-                                <td class="ithirtyRate text-center">5.999%</td>
-                                <td class="ithirtyPoints text-center">0.000%</td>
-                                <td class="ithirtyApr text-center">6.002%</td>
+                                <td class="ithirtyRate text-center" id="thirtyYrRateI"></td>
+                                <td class="ithirtyPoints text-center" id="thirtyYrPointsI"></td>
+                                <td class="ithirtyApr text-center" id="thirtyYrAPRI"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -260,9 +318,9 @@
                                 <td class="todayrate-table-td text-center">APR</td>
                             </tr>
                             <tr>
-                                <td class="itwentyRate text-center">5.999%</td>
-                                <td class="itwentyPoints text-center">0.000%</td>
-                                <td class="itwentyApr text-center">6.002%</td>
+                                <td class="itwentyRate text-center" id="twentyYrRateI"></td>
+                                <td class="itwentyPoints text-center" id="twentyYrPointsI"></td>
+                                <td class="itwentyApr text-center" id="twentyYrAPRI"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -277,9 +335,9 @@
                                 <td class="todayrate-table-td text-center">APR</td>
                             </tr>
                             <tr>
-                                <td class="iFifteenRate text-center">5.999%</td>
-                                <td class="iFifteenPoints text-center">0.000%</td>
-                                <td class="iFifteenApr text-center">6.002%</td>
+                                <td class="iFifteenRate text-center" id="fifteenYrRateI"></td>
+                                <td class="iFifteenPoints text-center" id="fifteenYrPointsI"></td>
+                                <td class="iFifteenApr text-center" id="fifteenYrAPRI"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -294,9 +352,9 @@
                                 <td class="todayrate-table-td text-center">APR</td>
                             </tr>
                             <tr>
-                                <td class="iTenRate text-center">5.999%</td>
-                                <td class="iTenPoints text-center">0.000%</td>
-                                <td class="iTenApr text-center">6.002%</td>
+                                <td class="iTenRate text-center" id="tenYrRateI"> </td>
+                                <td class="iTenPoints text-center" id="tenYrPointsI"></td>
+                                <td class="iTenApr text-center" id="tenYrAPRI"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -311,9 +369,9 @@
                                 <td class="todayrate-table-td text-center">APR</td>
                             </tr>
                             <tr>
-                                <td class="iSevenRate text-center">5.999%</td>
-                                <td class="iSevenPoints text-center">0.000%</td>
-                                <td class="iSevenApr text-center">6.002%</td>
+                                <td class="iSevenRate text-center" id="sevenYrRateI"></td>
+                                <td class="iSevenPoints text-center" id="sevenYrPointsI"></td>
+                                <td class="iSevenApr text-center" id="sevenYrAPRI"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -328,9 +386,9 @@
                                 <td class="todayrate-table-td text-center">APR</td>
                             </tr>
                             <tr>
-                                <td class="iFiveRate text-center">5.999%</td>
-                                <td class="iFivePoints text-center">0.000%</td>
-                                <td class="iFiveApr text-center">6.002%</td>
+                                <td class="iFiveRate text-center" id="fiveYrRateI"></td>
+                                <td class="iFivePoints text-center" id="fiveYrPointsI"></td>
+                                <td class="iFiveApr text-center" id="fiveYrAPRI"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -363,52 +421,52 @@
     <script src="js/main.js"></script>
      <script>
 
-        $(document).ready(function(){
-            $.getJSON("rates.json", function(json) {
-                console.log(json);
-                var primaryDetails = json.primary[0];
-                $('.pthirtyRate').text(primaryDetails.thirtyYear.rate);
-                $('.pthirtyPoints').text(primaryDetails.thirtyYear.points);
-                $('.pthirtyApr').text(primaryDetails.thirtyYear.apr);
-                $('.ptwentyRate').text(primaryDetails.twentyYear.rate);
-                $('.ptwentyPoints').text(primaryDetails.twentyYear.points);
-                $('.ptwentyApr').text(primaryDetails.twentyYear.apr);
-                $('.pfifteenRate').text(primaryDetails.fifteenYear.rate);
-                $('.pfifteenPoints').text(primaryDetails.fifteenYear.points);
-                $('.pfifteenApr').text(primaryDetails.fifteenYear.apr);
-                $('.pTenRate').text(primaryDetails.tenYear.rate);
-                $('.pTenPoints').text(primaryDetails.tenYear.points);
-                $('.pTenApr').text(primaryDetails.tenYear.apr);
-                $('.pSevenRate').text(primaryDetails.sevenYear.rate);
-                $('.pSevenPoints').text(primaryDetails.sevenYear.points);
-                $('.pSevenApr').text(primaryDetails.sevenYear.apr);
-                $('.pFiveRate').text(primaryDetails.fiveYear.rate);
-                $('.pFivePoints').text(primaryDetails.fiveYear.points);
-                $('.pFiveApr').text(primaryDetails.fiveYear.apr);
+        // $(document).ready(function(){
+        //     $.getJSON("rates.json", function(json) {
+        //         console.log(json);
+        //         var primaryDetails = json.primary[0];
+        //         $('.pthirtyRate').text(primaryDetails.thirtyYear.rate);
+        //         $('.pthirtyPoints').text(primaryDetails.thirtyYear.points);
+        //         $('.pthirtyApr').text(primaryDetails.thirtyYear.apr);
+        //         $('.ptwentyRate').text(primaryDetails.twentyYear.rate);
+        //         $('.ptwentyPoints').text(primaryDetails.twentyYear.points);
+        //         $('.ptwentyApr').text(primaryDetails.twentyYear.apr);
+        //         $('.pfifteenRate').text(primaryDetails.fifteenYear.rate);
+        //         $('.pfifteenPoints').text(primaryDetails.fifteenYear.points);
+        //         $('.pfifteenApr').text(primaryDetails.fifteenYear.apr);
+        //         $('.pTenRate').text(primaryDetails.tenYear.rate);
+        //         $('.pTenPoints').text(primaryDetails.tenYear.points);
+        //         $('.pTenApr').text(primaryDetails.tenYear.apr);
+        //         $('.pSevenRate').text(primaryDetails.sevenYear.rate);
+        //         $('.pSevenPoints').text(primaryDetails.sevenYear.points);
+        //         $('.pSevenApr').text(primaryDetails.sevenYear.apr);
+        //         $('.pFiveRate').text(primaryDetails.fiveYear.rate);
+        //         $('.pFivePoints').text(primaryDetails.fiveYear.points);
+        //         $('.pFiveApr').text(primaryDetails.fiveYear.apr);
 
-                var investmentDetails = json.investment[0];
+        //         var investmentDetails = json.investment[0];
 
-                $('.ithirtyRate').text(investmentDetails.thirtyYear.rate);
-                $('.ithirtyPoints').text(investmentDetails.thirtyYear.points);
-                $('.ithirtyApr').text(investmentDetails.thirtyYear.apr);
-                $('.itwentyRate').text(investmentDetails.twentyYear.rate);
-                $('.itwentyPoints').text(investmentDetails.twentyYear.points);
-                $('.itwentyApr').text(investmentDetails.twentyYear.apr);
-                $('.ififteenRate').text(investmentDetails.fifteenYear.rate);
-                $('.ififteenPoints').text(investmentDetails.fifteenYear.points);
-                $('.ififteenApr').text(investmentDetails.fifteenYear.apr);
-                $('.iTenRate').text(investmentDetails.tenYear.rate);
-                $('.iTenPoints').text(investmentDetails.tenYear.points);
-                $('.iTenApr').text(investmentDetails.tenYear.apr);
-                $('.iSevenRate').text(investmentDetails.sevenYear.rate);
-                $('.iSevenPoints').text(investmentDetails.sevenYear.points);
-                $('.iSevenApr').text(investmentDetails.sevenYear.apr);
-                $('.iFiveRate').text(investmentDetails.fiveYear.rate);
-                $('.iFivePoints').text(investmentDetails.fiveYear.points);
-                $('.iFiveApr').text(investmentDetails.fiveYear.apr);
+        //         $('.ithirtyRate').text(investmentDetails.thirtyYear.rate);
+        //         $('.ithirtyPoints').text(investmentDetails.thirtyYear.points);
+        //         $('.ithirtyApr').text(investmentDetails.thirtyYear.apr);
+        //         $('.itwentyRate').text(investmentDetails.twentyYear.rate);
+        //         $('.itwentyPoints').text(investmentDetails.twentyYear.points);
+        //         $('.itwentyApr').text(investmentDetails.twentyYear.apr);
+        //         $('.ififteenRate').text(investmentDetails.fifteenYear.rate);
+        //         $('.ififteenPoints').text(investmentDetails.fifteenYear.points);
+        //         $('.ififteenApr').text(investmentDetails.fifteenYear.apr);
+        //         $('.iTenRate').text(investmentDetails.tenYear.rate);
+        //         $('.iTenPoints').text(investmentDetails.tenYear.points);
+        //         $('.iTenApr').text(investmentDetails.tenYear.apr);
+        //         $('.iSevenRate').text(investmentDetails.sevenYear.rate);
+        //         $('.iSevenPoints').text(investmentDetails.sevenYear.points);
+        //         $('.iSevenApr').text(investmentDetails.sevenYear.apr);
+        //         $('.iFiveRate').text(investmentDetails.fiveYear.rate);
+        //         $('.iFivePoints').text(investmentDetails.fiveYear.points);
+        //         $('.iFiveApr').text(investmentDetails.fiveYear.apr);
                 
-            });
-        });
+        //     });
+        // });
     </script>
 </body>
 
