@@ -32,21 +32,37 @@ var primary = {
 	}
 }
 
-$(document).ready(function(){
-    var thirtyYrRateP = primary.thirtyYear.rate;
-    var thirtyYrPointsP = primary.thirtyYear.points;
-    var thirtyYrAPRP = primary.thirtyYear.apr;
 
-    $('#thirtyYrRateP').val(thirtyYrRateP);
-    $('#thirtyYrPointsP').val(thirtyYrPointsP);
-    $('#thirtyYrAPRP').val(thirtyYrAPRP);
-
-   
-
-});
 
 function changeVal(){
     primary.thirtyYear.rate = $('#thirtyYrRateP').val();
     primary.thirtyYear.points = $('#thirtyYrPointsP').val();
     primary.thirtyYear.apr = $('#thirtyYrAPRP').val();
+}
+
+
+function saveValOfPrimary(){
+
+	var thirtyYrRate    =      $('#thirtyYrRateP').val();
+	var thirtyYrPointsP =      $('#thirtyYrPointsP').val();
+	var thirtyYrAPRP    =      $('#thirtyYrAPRP').val();
+	var twentyYrRateP   =      $('#twentyYrRateP').val();
+	var twentyYrPointsP =      $('#twentyYrPointsP').val();
+	var twentyYrAPRP    =      $('#twentyYrAPRP').val();
+	var fifteenYrRateP  =      $('#fifteenYrRateP').val();
+	var fifteenYrPointsP=      $('#fifteenYrPointsP').val();
+	var fifteenYrAPRP   =      $('#fifteenYrAPRP').val();
+	var tenYrRateP      =      $('#tenYrRateP').val();
+	var tenYrPointsP    =      $('#tenYrPointsP').val();
+	var tenYrAPRP       =      $('#tenYrAPRP').val();
+	var sevenYrRateP    =      $('#sevenYrRateP').val();
+	var sevenYrPointsP  =      $('#sevenYrPointsP').val();
+	var sevenYrAPRP     =      $('#sevenYrAPRP').val();
+	var fiveYrRateP     =      $('#fiveYrRateP').val();
+	var fiveYrPointsP   =      $('#fiveYrPointsP').val();
+	var fiveYrAPRP      =      $('#fiveYrAPRP').val();
+
+	
+
+
 }
